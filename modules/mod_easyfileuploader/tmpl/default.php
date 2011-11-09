@@ -219,6 +219,11 @@ function mailattach2($docList, $texto1, $texto2, $texto3, $texto4, $texto5,
         $message = $message."\n".$texto5.": ".$_POST['answer5'];
     if ($_POST['ztext1']) 
         $message = $message."\n".$ztext1.": ".$_POST['ztext1'];
+    $user =& JFactory::getUser();
+    if ((! $user->guest) && $user->email){
+        $message .= "\nCorreo electrónico del usuario registrado: ";
+        $message .= $user->email."\n";
+    }
 
     $headers = "From: ". $nameEmailOrigin . " <". $emailOrigin .">\n";
     $headers .= "Reply-To: $emailDestination\n";
