@@ -1,0 +1,1456 @@
+/*
+ * @author ( Angie Radtke )
+*/
+
+
+/* not ready */
+
+/* ##########################  general  ########################### */
+html, body {
+    height:100%;
+}
+
+body {
+    text-align:center
+}
+a {
+   outline: 0;
+}
+
+#all
+{
+    margin: 0 auto -130px;
+    position: relative;
+    min-height:100%;
+    height:auto !important;
+    height:100%;
+    width:100%;
+    text-align:left
+}
+.push {
+    height:130px;
+}
+
+gallery {
+    position:relative;
+    }
+
+bunner{
+    position:relative;
+    }
+
+#header
+{
+    position:relative;
+}
+a {color:#060}
+a:hover {text-decoration:none}
+
+input:focus
+{
+}
+
+fieldset
+{
+    border:solid 0px #ccc
+}
+
+.article-info
+{
+    color:#444
+}
+
+.article-info dd span
+{
+    color:#444;
+    border-right:solid 0px;
+    background:#eee
+}
+
+/* XXX callao_chico */
+.reset_form{
+
+}
+/* XXX */
+
+.reset-confirm input{
+ background:#fff url(../images/content_bg.gif) repeat-x ;
+    border:solid 1px #ccc;
+    margin-top:0px;
+    padding:3px;
+    /*---Packmaniatic--*/
+     /*font-family:Arial, Verdana, Helvetica, sans-serif;*/
+     font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+     font-size:12px;
+     -moz-border-radius: 5px;
+      border-radius:4px;
+     -webkit-border-radius: 4px;
+
+}
+
+.reset-confirm button {
+    background: none repeat scroll 0 0 #F2A03D;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    height: 22px;
+    line-height: 22px;
+    padding: 0 11px;
+    text-transform: uppercase;
+}
+
+.reset-confirm dl dt {width: 200px;}
+	}
+
+/* ##########################  back  ########################### */
+
+#back
+{
+
+}
+
+/* ##########################  logo  ########################### */
+
+#logo span
+{
+    color:#fff;
+    padding-left:50px;
+    text-transform:none;
+     font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+#all #header
+{ 
+}
+.logoheader
+{
+    position:absolute;
+    color:#fff;
+    z-index:10
+}
+
+
+h1#logo
+{
+}
+
+
+#line
+{
+
+}
+
+
+/* ##########################  header  ########################### */
+
+#header
+{
+    position:relative
+
+
+}
+
+/* ++++++++++++++  lists, skiplinks  ++++++++++++++ */
+
+
+#header ul.skiplinks
+{
+}
+
+#header ul.skiplinks li a.u2:active,
+#header ul.skiplinks li a.u2:focus
+
+{
+}
+
+
+
+/* ++++++++++++++  search  ++++++++++++++ */
+#header form,
+#header form .search
+{
+display:inline;
+padding-right:1px ;
+
+
+}
+
+#header form .inputbox
+{
+    background:url(../images/header-bg.gif) repeat-x;
+    border:solid 1px #ccc;
+    border-bottom:0;
+    border-right:0;
+    padding:3px
+
+}
+
+#METRO form .inputbox:focus
+{
+    border:solid 1px #000;
+}
+
+#header form .button
+{
+    border:solid 0px #ddd;
+    background:#ccc url(../images/personal/button.png);
+    color:#333;
+    padding:3px !important
+}
+
+/* ##########################  contentarea  ########################### */
+
+#contentarea,
+#contentarea2
+{
+    background:#fff
+}
+
+
+/* ##########################  breadcrumbs  ########################### */
+
+#breadcrumbs
+{
+    color:#333;
+}
+
+#breadcrumbs span
+{
+    color:#333;
+}
+
+
+
+
+/* ##########################  navigation column  ########################### */
+
+.module_content
+{
+    border:solid 1px #ddd;
+
+}
+.moduletable_js
+{
+    border:solid 0px #ddd;
+}
+
+#right .moduletable_js
+{
+    border:0
+}
+
+#nav h3
+{
+  border-bottom:solid 1px #ddd;
+  
+  color:#555
+}
+
+h3.js_heading
+{
+    border-bottom:solid 1px #ddd;
+    background:#eee;
+    
+}
+
+h3.js_heading span.backh
+{
+    border:solid 0px #000
+}
+
+h3.js_heading span.backh1
+{
+
+}
+
+h3.js_heading a
+{
+    border:0
+}
+
+h3.js_heading a img
+{
+    border:0
+}
+
+h3.js_heading a.opencloselink:hover,
+h3.js_heading a.opencloselink:active,
+h3.js_heading a.opencloselink:focus
+{
+    background:none
+}
+
+
+#right h3 span.backh
+{
+
+}
+
+#right h3 span.backh2
+{
+    background:#fff;
+    color:#555;
+    border-bottom:solid 1px #ddd
+}
+
+#right h3 span.backh3
+{
+padding-left:0
+}
+
+
+#nav form
+{
+    color:#000;
+}
+
+
+
+/* ++++++++++++++  first level  ++++++++++++++ */
+#nav .moduletable-example ul.menu
+{
+    border:0;
+}
+
+ul.menu
+{
+    border:0;
+}
+
+.module_content ul.menu
+{
+    border:0;
+}
+
+
+
+/* ++++++++++++++  second level  ++++++++++++++ */
+
+ul.menu li ul
+{
+    border:solid 0px #eee;
+}
+
+ ul.menu li ul li
+{
+}
+
+
+
+
+/* ++++++++++++++  third level  ++++++++++++++ */
+
+ul.menu li ul li ul
+{
+    border:0 !important;
+    background:#f5f5f5 !important;
+    padding-bottom:0
+}
+
+
+
+
+
+/* ++++++++++++++  fourth level  ++++++++++++++ */
+
+ul.menu li ul li ul li ul
+{
+    border:solid 1px #eee !important;
+    padding-top:10px !important;
+    padding-bottom:10px !important;
+    background:#fff url(../images/nature/level4.png) repeat-x !important;
+}
+
+
+
+
+
+
+/* ++++++++++++++  fifth level  ++++++++++++++ */
+
+ul.menu li ul li ul li ul li ul
+{
+    border:solid 0px #eee !important;
+    padding-top:5px !important;
+    padding-bottom:10px !important;
+    background:#fff !important; 
+}
+
+
+
+/* ##########################  content - main   ########################### */
+
+
+#main
+{
+
+}
+
+
+.items-row
+{
+}
+
+.items-row h2
+{
+}
+
+.column-1,
+.column-2
+{
+    border: solid 0px ;
+}
+
+.item-separator
+{
+    border: solid 0px #333333;
+}
+
+#main ul li
+{
+
+}
+
+.small
+{
+    border:solid 0;
+}
+
+ul#archive-items li.row0,
+ul#archive-items li.row1
+{
+    border-bottom:solid 1px #ddd 
+}
+
+.archive #adminForm fieldset
+{
+    border:0;
+    padding:0;
+    margin:20px 0
+}
+/* ++++++++++++++  images  ++++++++++++++ */
+
+.image-left
+{
+    padding:2px;
+}
+
+.image-right
+{
+    border:solid 1px #ddd;
+    padding:2px
+}
+
+/* ++++++++++++++  leading  ++++++++++++++ */
+
+.items-leading
+{
+
+}
+
+
+/* ++++++++++++++++++++ headings +++++++++++++ */
+#main h1
+{ color:#0d4c89;
+
+    border-bottom:solid 1px #ddd;
+    
+
+
+}
+
+
+#main .blog  h1,
+#main .blog-featured  h1
+{
+    color:#0d4c89;
+    border-top:solid 1px #ddd;
+    border-bottom:solid 1px #ddd;
+    
+    margin-top:-1px !important
+
+}
+
+/* h1 on frontpage */
+
+.items-row h2
+{
+}
+
+.items-leading h2,
+#main h3,
+#main h4
+{
+    text-decoration:none;
+}
+
+#main h2
+
+{
+    color:#676767;
+    
+
+}
+
+#main h2 a
+{
+    color:#676767 !important
+}
+
+h2 a
+{
+    color:#676767 !important;
+    text-decoration:none;
+}
+
+h2 a:hover
+{
+    color:#fab700 !important;
+    text-decoration:none;
+}
+
+/* ++++++++++++++  readmore  ++++++++++++++ */
+
+.readmore
+{
+    color:#060;
+    display:block;
+    float:left;
+    line-height:13px;
+    text-decoration:none;
+    margin-top:5px;
+    font-size:11px;
+    text-transform:uppercase;
+    /* XXX: callao chico */
+    letter-spacing:1pt;
+    /* XXX */
+
+}
+
+/* boton de leer mas*/
+.readmore span{
+    color: #8a8989;
+    
+}
+
+
+.readmore span:hover
+{
+    color:#fab700;
+    
+}
+
+.pagenav-next a, .pagenav-prev a
+{
+    color:#ee9d01;
+    background:url(../images/read_more.gif) repeat-x 0 0  !important;
+    font-weight:bold;
+    display:block !important;
+    line-height:27px;
+    text-decoration:none;
+    border:1px solid #dfdede;
+    padding:0 12px 0 13px !important;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    margin-top:13px;
+    /*font-family:Arial, Helvetica, sans-serif;*/
+     font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:12px;
+}
+.pagenav-next a:hover, .pagenav-prev a:hover
+{
+    color:#000
+}
+
+/* ++++++++++++++  icons  ++++++++++++++ */
+
+.actions img
+{
+    border:0;
+}
+
+/* ++++++++++++++  items-more  ++++++++++++++ */
+
+#main .items-more h3
+{
+    border-bottom:solid 1px #ddd;
+    border-top:solid 1px #ddd;
+    color:#444;
+}
+
+#main .items-more ol
+{
+    color:#000;
+}
+
+#main .items-more ol li a
+{
+    background:#FFFFFF url(../images/blog_more.gif) no-repeat 0px center;
+    color:#095197
+}
+
+#main .items-more ol li a:hover,
+#main .items-more ol li a:active,
+#main .items-more ol li a:focus
+{
+    background: #095197 url(../images/blog_more_hover.gif) no-repeat 0px center;
+    color:#fff;
+}
+
+/* ++++++++++++++  pagination  ++++++++++++++ */
+
+#main .pagination
+{
+    border-top:solid 1px #ddd;
+}
+
+/* ++++++++++++++  article index  ++++++++++++++ */
+
+table.contenttoc
+{
+    border:solid 1px #ccc;
+}
+
+
+/* ##########################  right column   ########################### */
+
+#right
+{
+    border:solid 0px #e6e6e6;
+    background:#fff
+}
+
+
+
+#right h3
+{
+
+}
+
+#right h4
+{
+    color:#555;
+    border:solid 0;
+}
+
+
+
+
+
+
+/* ++++++++++++++  button for closing right column  ++++++++++++++ */
+#close span
+{
+    color:#000;
+}
+
+/* ##########################  modules  ########################### */
+
+/* ++++++++++++++  mostread, latest news ++++++++++++++ */
+
+
+
+/* ++++++++++++++  newsfeed  ++++++++++++++ */
+
+ul.newsfeed
+{
+    border:solid 0px #000;
+}
+
+.newsfeed-item
+{
+    border-bottom:solid 1px #ddd;
+}
+
+.newsfeed-item h5 a
+{
+
+}
+
+/* ++++++++++++++  newsflash  ++++++++++++++ */
+/* newsflash horizontal */
+
+ul.newsflash-horiz
+{
+    background:#F5F5F5 url(../images/nature/box.png) repeat-x;
+    border:1px solid #EEEEEE;
+}
+
+ul.newsflash-horiz li
+{
+    border:solid 0px #eee;
+    background:#f5f5f5;
+}
+
+ul.newsflash-horiz li h4
+{
+    
+}
+
+
+/* newsflash vertical */
+
+.newsflash-vert
+{
+
+}
+
+/* ++++++++++++++  banner  ++++++++++++++ */
+
+.banneritem
+{
+    border:0
+}
+
+.banneritem a
+{
+    background:none
+}
+
+.banneritem a img
+{
+    background:none;
+    border:0
+}
+
+/* ++++++++++++++  login  ++++++++++++++ */
+
+.form-validate {
+    height:auto;
+    }
+
+#login-form .inputbox
+{
+
+}
+
+#login-form
+{
+margin-left: 30px;
+margin-right: 20px;
+}
+
+
+fieldset.input
+{
+    border:0 ;
+}
+
+input.button,
+button.button,
+button.validate
+{
+    
+}
+.picture {
+    border:1px solid #cecece;    
+    overflow:hidden;
+    position:relative;
+    max-width:678px;
+}
+.contact-email .login_button {margin-top:13px}
+.login_button, .logout-button {
+    color:#fff;
+    font-weight:bold;
+    display:block;
+    float:left;
+    text-decoration:none;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:11px;    
+    zoom:1;
+    position:relative;
+    text-transform:uppercase;
+    
+}
+.login_button input, .login_button button, .logout-button input {
+    background:#f2a03d;
+    padding:0 11px 0 11px;
+    display:block;
+    height:22px;
+    line-height:22px;
+    cursor:pointer;
+    border:none;
+    color:#fff;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:11px;    
+    text-transform:uppercase;
+    _width:100px;
+
+}
+.login_button input:hover, .login_button button:hover, .logout-button input:hover {
+    color:#4b4a4a;
+    background:#fff
+}
+
+.file input {
+    background:#f2a03d;
+    padding:0 11px 0 11px;
+    display:block;
+    height:22px;
+    line-height:22px;
+    cursor:pointer;
+    border:none;
+    color:#fff;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:11px;    
+    text-transform:uppercase;
+    *width:1%
+
+}
+
+
+.file input :hover {
+    color:#fff;
+    background:#060
+}
+
+
+.title_remind {padding:7px 20px 0 0; font-size:12px;}
+.reg_label {padding:10px 20px 0 0 !important; font-size:12px; display:block; width:150px}
+/* ++++++++++++++  tabs/ slide  ++++++++++++++ */
+
+ul.tabs
+{
+    border:solid 1px #ddd;
+    border-bottom:0;
+    background:#f5f5f5 url(../images/nature/box.png) repeat-x;
+}
+
+ul.tabs li
+{
+    background:#f5f5f5 url(../images/nature/box.png) repeat-x;
+    border-right:solid 1px #ddd
+}
+
+
+.tabcontent
+{
+    border:solid 1px #ddd;
+    background:#fff;
+    color:#000;
+}
+
+.tabcontent .linkclosed
+{
+    color:#000;
+    border-bottom:solid 1px #e5e5e5;
+}
+
+ul.tabs li a.linkopen
+{
+    background:#fff;
+    color:#333;
+    border:0
+}
+
+
+
+/* ++++++++++++++  category-module  ++++++++++++++ */
+
+
+
+
+.category-module li
+{
+    border-bottom:solid 1px #ddd;
+}
+
+.category-module li li
+{
+    border:0
+}
+
+
+
+/* ##########################  search   ########################### */
+
+.searchintro img
+{
+    border:0px
+}
+
+.inputbox:focus
+{
+}
+
+.word
+{
+    background:#fff;
+    border:solid 0px #ccc ;
+}
+
+.word input
+{
+    border:solid 1px #e6e6e6;
+    background:#fff;
+    color:#333;
+    font-size:12px;
+    color:#a0a0a0;
+    padding-bottom:0;
+    padding-top:0;
+    line-height:21px;
+    height:21px;
+}
+
+.only
+{
+    border:solid 1px #ccc;
+}
+
+.phrases
+{
+    color:#000;
+    border:solid 1px #ccc;
+}
+
+/* ++++++++++++++  selects  ++++++++++++++ */
+.phrases .inputbox
+{
+    background:#fff;
+    color:#000;
+}
+
+.phrases .inputbox option
+{
+    background:#f5f5f5;
+    border-bottom:solid 1px #ccc;
+}
+
+.phrases .inputbox option a:hover
+{
+    background:#C00;
+    border-color:#CFD0D6;
+    color:#fff;
+}
+
+/* ++++++++++++++   search results    ++++++++++++++++++ */
+
+dl.search-results
+{
+    background:#f5f5f5;
+}
+
+dl.search-results dt.result-title
+{
+    border-top:dotted 1px #ddd
+}
+
+dl.search-results dd.result-created
+{
+    border-bottom:solid 5px #fff;
+}
+
+/* ##########################  forms   ########################### */
+
+
+/* ++++++++++++++  form validation  ++++++++++++++ */
+
+.invalid
+{
+    border-color:red !important;
+}
+
+label.invalid
+{
+    color:red;
+}
+
+
+/* ##########################  user profile  ########################### */
+#users-profile-core,
+#users-profile-custom
+{
+    border:solid 1px #ccc;
+}
+
+#member-profile fieldset
+{
+    border:solid 1px #ccc;
+}
+
+
+/* ##########################  tables   ########################### */
+table
+{
+
+}
+
+tbody
+{
+
+}
+
+tr.odd,
+.cat-list-row1
+{
+    background:url(../images/news.gif)  repeat-x;
+}
+
+table.newsfeeds td,
+table.weblinks td
+{
+
+}
+
+table.weblinks th,
+table.newsfeeds th,
+table.category th,
+table.jlist-table th
+{
+    background:#444 ;
+}
+
+table.weblinks th a,
+table.newsfeeds th a,
+table.category th a,
+table.jlist-table th a,
+table.weblinks th,
+table.newsfeeds th,
+table.category th,
+table.jlist-table th
+{
+    color:#fff
+}
+
+
+td.table_footer
+{
+    background:#ddd url(../images/table_footer.gif) bottom left repeat-x;
+}
+
+td.counter
+{
+
+}
+
+td.num,
+td.hits
+{
+
+}
+
+td p
+{
+
+}
+
+table.category th a img
+{
+    border:solid 0px ;
+}
+
+/* for opera */
+tr, td
+{
+    border:solid 1px #ddd
+}
+
+
+#main table.moduletable td,
+#main table.moduletable tr
+{border:0;}
+fieldset.filters
+{
+    border:solid 0px #ddd;
+
+}
+
+/* ##########################  contacts   ########################### */
+
+.contact form
+{
+    background:#fff;
+    color:#000;
+}
+
+.contact input
+{
+    background:#fff;
+    color:#000;
+}
+
+.contact .button
+{
+
+}
+
+.contact input.invalid,
+.contact textarea.invalid
+{
+    border:solid 2px red;
+}
+
+.contact label.invalid
+{
+    color:red;
+}
+
+
+/* ++++++++++++++  Error Message contact form  ++++++++++++++ */
+
+p.error
+{
+    color:#044b63;
+    background:#eee;
+    border-top:3px solid #044b63;
+    border-bottom:3px solid #044b63;
+}
+
+body.contentpane
+{
+    background:#fff;
+}
+
+p input.button {color:white;}
+
+/* ##########################  footer   ########################### */
+
+#footer
+{
+      /*  background:url(../images/footer_bg.gif) repeat-x;*/
+    color:#9a9a9a;
+}
+
+#footer-inner
+{
+    background:#f5f5f5 url(../images/personal/footer.jpg) repeat-x left bottom;
+    border-top:solid 1px #ddd
+}
+
+#footer a
+{
+    color:#9a9a9a;
+}
+
+#bottom a img
+{
+    border:0
+}
+
+.box h3
+{
+    
+}
+.box ul
+{padding-left:0}
+
+.box1
+{border-right:solid 1px #ccc}
+.box3
+{border-left:solid 1px #ccc}
+#bottom  ul li a
+{background-image:none;
+padding-left:0}
+/* ##########################  editor  ########################### */
+
+.contentpaneopen_edit img
+{
+    border:0
+}
+
+form.editor fieldset
+{
+    border:solid 1px #ccc;
+}
+
+
+/* ++++++++++++++  edit  ++++++++++++++ */
+
+form#adminForm
+{
+    border:solid 0px #000
+}
+
+.edit form#adminForm fieldset
+{
+    border:solid 1px #ddd
+}
+.edit form#adminForm  legend
+{
+    font-weight:bold
+}
+/* ++++++++++++++  tooltip  ++++++++++++++ */
+.tip
+{
+    border:solid 1px #333;
+    background:#ffffcc;
+}
+
+
+/*-------------------------------*/
+
+
+table.pagenav,
+table.pagenav tr,
+table.pagenav td
+{border:0 !important}
+
+.cat-children ul ul,  
+.categories-list ul ul
+{
+    list-style-type:none; 
+
+}
+
+.cat-children ul ul ul,
+.categories-list ul ul ul
+{
+    
+
+}
+.categories-list .category-desc ul li
+{list-style-type:square
+}
+
+/* contact  plain */
+#main .contact h3
+{
+    border-bottom:solid 1px #ddd;
+    margin: 20px 0
+}
+
+.form-required
+{
+    font-weight:bold;
+    margin:10px 0;
+    background:#fff url(../images/req.png) no-repeat;
+    padding:10px 40px;
+    position:relative;
+    /* XXX callao chico */
+    color: red;
+}
+
+.contact .inputbox,
+.registration input,
+.profile-edit input,
+.login-fields input,
+/*---Packmaniatic--*/
+.login-fields textarea,
+.login-fields file,
+.fileimputs
+
+/*- Packmaniatic nueva clase creada--*/
+.remind input,
+.reset input
+
+
+{
+    background:#fff url(../images/content_bg.gif) repeat-x ;
+    border:solid 1px #ccc;
+    margin-top:0px;
+    padding:3px;
+    /*---Packmaniatic--*/
+     /*font-family:Arial, Verdana, Helvetica, sans-serif;*/
+     font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+     font-size:12px;
+    
+     /*- nuevo atributo creado--*/
+}
+
+.profile-edit select
+{
+    padding:0px;
+    border:solid 1px #ccc;
+    background:#f5f5f5;
+
+}
+.profile-edit select option
+{
+    padding:3px
+
+}
+/* contact  slider */
+
+.panel
+{
+    margin-top:-1px
+
+}
+#main .contact .panel h3
+{
+    margin:0px 0 0px 0;
+    padding: 0;
+    border:0
+}
+.panel h3 {margin:0 !important; font-size:14px}
+.panel h3 a
+{
+    display:block;
+    padding:6px;
+    text-decoration:none;
+    color:#444;
+    padding:6px;
+    width:678px
+}
+
+
+.panel h3.pane-toggler a
+{
+    background:#f5f5f5 url(../images/slider_plus.png) right  top no-repeat;
+    display:block;
+}
+.panel h3.pane-toggler-down a
+{
+    background:#f5f5f5  url(../images/slider_minus.png) right  top no-repeat;
+    border-bottom:solid 1px #ddd;
+}
+
+.pane-slider
+{
+    border:solid 0px;
+    padding:0px 10px !important;
+    margin:0;
+    background: url(../images/nav_level_1.gif) repeat-x ;
+    position:relative;
+}
+
+.panel .contact-form,
+.panel  .contact-miscinfo
+{
+    padding:10px
+}
+
+.contact .panel .contact-form form,
+.contact .panel .contact-address
+{
+    margin:20px 0 0 0
+}
+
+
+/* tabs */
+
+div.current
+{
+
+    background: url(../images/nav_level_1.gif) repeat-x ;
+}
+
+/* image upload modal */
+
+
+
+
+.wrapper_overflow {
+    overflow:hidden;
+}
+
+.phone {color:#57772a; font-size:36px; text-transform:uppercase; position:absolute; top:175px; left:168px; letter-spacing:-1px; line-height:25px;}
+.main_block_title { position:absolute; top:70px; left:49px; color:#57772a; font-size:41px; text-transform:uppercase; letter-spacing:-2px;}
+.main_block_title2 { position:absolute; top:120px; left:49px; color:#676767; font-size:34px; letter-spacing:-2px;}
+.main_block_title2 strong {text-transform:uppercase; color:#7fa845; }
+
+ul.actions {float:right; margin-top:-35px;}
+ul.actions li {float:left; list-style:none; margin:0px 0 0 1px;}
+
+#footer {position:relative}
+
+
+.sub_+ {position:absolute; right:4px; top:37px; background: url(../images/sub_menu_bg.gif) no-repeat 0% 0%; }
+.sub_header_right {background: url(../images/sub_menu_bg_right.gif) no-repeat 100% 0%; padding:14px 24px 3px 24px; height:34px; }
+
+.bottom_menu {float:left}
+.bottom_menu ul {background:none; padding:0; margin:0}
+.bottom_menu h3 {font-weight:bold; color:#9a9a9a; font-size:12px; margin:8px 0 15px 0}
+.bottom_menu ul li {padding:0; margin:0; line-height:18px;}
+.bottom_menu ul li a {color:#9a9a9a; text-decoration:underline; line-height:18px; font-size:12px;}
+.bottom_menu ul li a:hover {text-decoration:none;}
+.company {width:108px; margin-left:5px;}
+.serv {width:147px;}
+.prod {width:126px;}
+.partners {width:172px;}
+.community {width:144px;}
+.solutions {width:151px;}
+.social {width:105px;}
+.social ul li {float:left; margin-right:5px;}
+
+.pagination ul {list-style:none; margin:15px 0 0; text-align:center}
+.pagination ul li{display:inline; margin:0 5px;}
+
+
+.jicons-icons {display:block; float:left; width:35px; text-align:center}
+.contact-address address {display:inline-block; margin:0 0 10px}
+
+#form-login-username input {width:150px; background:#fff; border:1px solid #e6e6e6}
+#form-login-password input {width:150px; background:#fff; border:1px solid #e6e6e6}
+#form-login-mail input {width:150px; background:#fff; border:1px solid #e6e6e6}
+
+/*sub_page*/
+/* CSS Document */
+.text-sub h4{ color:#302f2f; padding:5px 0 19px 0; font-size:18px;  font-weight:normal;}
+.text-sub p{ padding:0 0 15px 0 !important;}
+.sub-indent-img{ padding:25px 0;}
+.sub-indent-bottom{ display:block; padding-bottom:5px;}
+
+.columns { width:100%; overflow:hidden; padding:0px 0 0 0;}
+.column-left { width:48%; float:left;}
+.column-left h3  { color:#000; font-size:14px;}
+.column-left h3  a{ color:#000; text-decoration:underline;}
+.column-left h3  a:hover
+{ text-decoration:none;color:#fab700; border:0px; }
+.column-right { width:48%; float:right;}
+.column-right h3  { color:#000; font-size:14px;}
+.column-right h3  a{ color:#000; text-decoration:underline;}
+.column-right h3  a:hover 
+{ text-decoration:none;color:#fab700; border:0px; }
+
+.columns dt{ color:#302f2f; font-weight:bold;}
+.columns dd{ padding:5px 0 9px 0;}
+
+.fleft {float:left; margin:0 15px 15px 0}
+.fright {float:right; margin:0 0px 15px 15px}
+
+.alignleft{ float:left; margin:0 15px 0 0 !important;}
+
+.content_rating {margin:15px 0 0; display:block;}
+fab700
+.colum_title { font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;font-size:14px; font-weight:bold; margin:0 0 14px 0}
+
+
+
+.one_third {float:left; width:250px; margin:0 10px 15px 0}
+.one_third2 {float:left; width:190px; margin:0 10px 15px 0}
+.one_third3 {float:right; width:250px; margin:0 0px 15px 10px}
+.col-1 ul li {margin:0 0 0 00px !important; line-height:20px;}
+ul li {margin:0 0 0 20px; line-height:20px;}
+.error ul li {border:none !important}
+.tip-text, .tip-title {color:#000}
+#map {padding:5px; border:1px solid #efeded}
+
+.leading-0, .leading-1, .leading-2, .leading-3, .leading-4 {margin-bottom:0px;}
+
+.col-1 {float:left; width:320px; margin:0 20px 0 0}
+
+
+.login-fields label {width:200px; padding:3px 0 0 0}
+
+#sidebar {background:#fab700; margin-right:18px;}
+
+.blogmain  {border-bottom:1px solid #dedede; padding: 0 0 0 0; margin-bottom:37px; position:relative;}
+.searhc_block {/*border-bottom:1px solid #dedede;*/ padding: 0 0 0 0;position:relative; height:44px; width:auto;}
+.searhc_block .search {position:relative; width:190px;}
+.searhc_block .search .inputbox {width:142px; padding:0 10px 0 10px; background:#fff; border:1px solid #e6e6e6; border-right:0; font-size:11px; color:#a0a0a0; position:absolute; line-height:24px; height:24px;}
+.searhc_block .search input.button {padding:0; position:absolute; right:1px}
+
+#news-gk4 { padding-top:0px; margin-top:0px;margin-bottom:37px; position:relative; height:auto; width:auto;}
+
+.contact_info {position:absolute; top:5px; left:207px; color:#a0a0a0}
+.newsleter {background:#4b4a4a; }
+.newsleter h3 {color:#fab700; margin-bottom:10px;background:#fff; font-size:23px; font-weight:bold;}
+.newsleter p{padding-right:20px; text-align: left; }
+
+#field_email_formAcymailing1 input {background:#fff; border:none; width:137px; padding:6px 10px; color:#a7a7a7; }
+.acysubbuttons {width:157px; text-align:right}
+.acysubbuttons input {background: url(../images/subscribe_button.gif) no-repeat 0% 0%; border:none; height:26px; width:85px; cursor:pointer}
+.acysubbuttons input:hover {background: url(../images/subscribe_button_h.gif) no-repeat 0% 0%;}
+
+.pagination ul li, .actions li {border:none !important}
+.pagination ul li a, .actions li a {background:none !important}
+.one_third ul li {margin:0}
+
+.reg_label {float:left; display:block; height:20px;}
+.registration dd {display:block; float:left; height:20px;}
+.grid_8  li {margin:0 !important}
+.rem {float:left; display:block; margin-top:-3px;}

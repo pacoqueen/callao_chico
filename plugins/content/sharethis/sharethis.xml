@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="content">
+    <name>ShareThis</name>
+    <author>ShareThis</author>
+    <copyright>Copyright (c) 2010 ShareThis, Inc.</copyright>
+    <license>GPL 3.0</license>
+    <authorUrl>http://sharethis.com</authorUrl>
+    <version>4.1.0</version>
+    <creationDate>22-April-2011</creationDate>
+    <description>
+        <![CDATA[Let your visitors share a post/page with others. Supports e-mail and posting to social bookmarking sites.]]>
+    </description>
+    <files>
+        <filename plugin="sharethis">sharethis.php</filename>
+		<filename>largeIcon.JPG</filename>
+        <filename>horizontalCounts.JPG</filename>
+        <filename>verticalCounts.JPG</filename>
+        <filename>classic.JPG</filename>
+        <filename>regularButtons.JPG</filename>
+        <filename>buttonNoText.JPG</filename>
+        <filename>buttons.JPG</filename>
+    </files>
+    <config>
+    <fields name="params">
+    	<fieldset name="basic">
+			
+			<!-- Given user choice to choose version of shareThis widget -->
+			<field name="widget_type" type="radio" default="1" label="Widget Type :" description="Choose shareThis widget version">
+					<option value="0">Classic</option> 
+					<option value="1">Multi-post</option> 
+			</field>
+			
+			<!-- Given user choice to choose widget position-->
+			<field name="Widget_position" type="radio" default="1" label="Widget Position :" description="Choose shareThis widget position">
+					<option value="0">Header</option> 
+					<option value="1">Footer</option> 
+			</field>
+			
+			<!-- Given user choice to choose widget alignment -->
+			<field name="alignment" type="radio" default="left" label="Widget Alignment :" description="Choose shareThis widget alignment">
+					<option value="left">Left</option> 
+					<option value="right">Right</option> 
+					<option value="center">Center</option> 
+					
+			</field>
+			
+			<!-- Given user choice to choose button style -->			
+			<field name="button_style" type="radio" default="lg-icons" label="Button Style :" description="Choose shareThis widget version">
+					<option value="lg-icons"><![CDATA[ <style>fieldset input, fieldset textarea, fieldset select, fieldset img, fieldset button,fieldset.adminform fieldset.radio label, fieldset.panelform fieldset.radio label {float: none !important;clear:both;}</style><div style='display:block;clear:both;'><div>Large Icons</div><img src="../plugins/content/sharethis/largeIcon.JPG" style='float:none;'></div>]]></option>
+					<option value="lg-horizontal"><![CDATA[ <div style='display:block;clear:both;'><div>Horizontal Count</div><img src="../plugins/content/sharethis/horizontalCounts.JPG"  style='float:none; width:270px'></div>]]></option>
+					<option value="lg-vertical"><![CDATA[ <div style='display:block;clear:both;'><div>Vertical Count</div><img src="../plugins/content/sharethis/verticalCounts.JPG" style='float:none;'></div>]]></option>
+					<option value="sm-classic"><![CDATA[ <div style='display:block;clear:both;'><div>Classic</div><img src="../plugins/content/sharethis/classic.JPG" style='float:none;'></div>]]></option>
+					<option value="sm-regular"><![CDATA[ <div style='display:block;clear:both;'><div>Regular Buttons</div><img src="../plugins/content/sharethis/regularButtons.JPG" style='float:none;'></div>]]></option>
+					<option value="sm-notext"><![CDATA[ <div style='display:block;clear:both;'><div>Regular Button No-Text</div><img src="../plugins/content/sharethis/buttonNoText.JPG" style='float:none;'></div>]]></option>
+					<option value="button"><![CDATA[ <div style='display:block;clear:both;'><div>Buttons</div><img src="../plugins/content/sharethis/buttons.JPG" style='float:none;'></div>]]></option>
+			</field>
+		</fieldset>
+    </fields>
+    </config>
+</extension>

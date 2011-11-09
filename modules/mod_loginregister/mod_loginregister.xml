@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.6.0"
+	client="site"
+	method="upgrade">
+	<name>Login Register</name>
+	<author>JM-Experts!</author>
+	<creationDate>April 2011</creationDate>
+	<copyright>Free Module by JM-Experts!. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@jm-experts.com</authorEmail>
+	<authorUrl>www.jm-experts.com</authorUrl>
+	<version>1.5.4</version>
+	<description>THANK_YOU_FOR_INSTALLING_LOGIN_REGISTER_MODULE</description>
+	<files>
+
+		<filename module="mod_loginregister">mod_loginregister.php</filename>
+        <filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/element/jquery.min.js</filename>
+		<filename>tmpl/index.html</filename>
+		<filename>tmpl/element/loads.gif</filename>
+		<filename>tmpl/element/captchacheck.php</filename>
+		<filename>tmpl/element/recaptchalib.php</filename>
+		<filename>tmpl/element/loginregisterlogo.png</filename>
+	</files>
+
+ <languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_loginregister.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_loginregister.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+                 <field
+					name="view"
+					type="list"
+					default='0'
+					label="DEFAULT_VIEW"
+					description="DEFAULT_VIEW_DESC">
+					<option
+						value="0">LOGIN</option>
+					<option
+						value="1">JREGISTER</option>
+				</field>
+
+
+                 <field
+					name="disablelog"
+					type="list"
+					default="0"
+					label="DISABLE_LOGIN"
+					description="DISABLE_LOGIN_DESC">
+					<option
+						value="0">JNo</option>
+					<option
+						value="1">JYes</option>
+				</field>
+
+
+
+				<field
+					name="pretext"
+					type="textarea"
+					filter="safehtml"
+					cols="30"
+					rows="5"
+					label="MOD_LOGIN_FIELD_PRE_TEXT_LABEL"
+					description="MOD_LOGIN_FIELD_PRE_TEXT_DESC" />
+				<field
+					name="posttext"
+					type="textarea"
+					filter="safehtml"
+					cols="30"
+					rows="5"
+					label="MOD_LOGIN_FIELD_POST_TEXT_LABEL"
+					description="MOD_LOGIN_FIELD_POST_TEXT_DESC" />
+				<field
+					name="login"
+					type="menuitem"
+					disable="separator"
+					label="MOD_LOGIN_FIELD_LOGIN_REDIRECTURL_LABEL"
+					description="MOD_LOGIN_FIELD_LOGIN_REDIRECTURL_DESC" >
+					<option
+						value="">JDEFAULT</option>
+				</field>
+				<field
+					name="logout"
+					type="menuitem"
+					disable="separator"
+					label="MOD_LOGIN_FIELD_LOGOUT_REDIRECTURL_LABEL"
+					description="MOD_LOGIN_FIELD_LOGOUT_REDIRECTURL_DESC" >
+					<option
+						value="">JDEFAULT</option>
+				</field>
+				<field
+					name="greeting"
+					type="radio"
+					default="1"
+					label="MOD_LOGIN_FIELD_GREETING_LABEL"
+					description="MOD_LOGIN_FIELD_GREETING_DESC">
+					<option
+						value="0">JNo</option>
+					<option
+						value="1">JYes</option>
+				</field>
+				<field
+					name="name"
+					type="list"
+					default="0"
+					label="MOD_LOGIN_FIELD_NAME_LABEL"
+					description="MOD_LOGIN_FIELD_NAME_DESC">
+					<option
+						value="0">MOD_LOGIN_VALUE_NAME</option>
+					<option
+						value="1">MOD_LOGIN_VALUE_USERNAME</option>
+				</field>
+				<field
+					name="usesecure"
+					type="radio"
+					default="0"
+					label="MOD_LOGIN_FIELD_USESECURE_LABEL"
+					description="MOD_LOGIN_FIELD_USESECURE_DESC">
+					<option
+						value="0">JNo</option>
+					<option
+						value="1">JYes</option>
+				</field>
+				<field type="radio" name="tos" default='1' label="TOS" description="TOS_DESC">
+			<option value="0">Enable</option>
+			<option value="1">Disable</option>
+			</field>
+		<field type="text" name="title" default='I Agree term of use' label="DISPLAY_TEXT"  description="DISPLAY_TEXT_DESC" />	
+		<field type="text" name="articleid" default='1' label="ARTICLE_ID" description="ARTILCE_ID_DESC"/>
+			<field name="newwindow" type="list" default="_self" label="LINK">
+					
+				
+
+					<option value="_self">OPEN_IN_SAME_WINDOW</option>
+					<option value="_blank">OPEN_IN_NEW_WINDOW</option>
+				
+				</field>	
+				<field type="radio" name="checkbox" default='checked' label="CHECKBOX" description="CHECKBOX_DESC">
+			<option value="checked">CHECKED</option>
+			<option value="notchecked">NOT_CHECKED</option>
+		</field>
+		<field name="jqueryload" type="list" default='local' label="JQUERY_SOURCE" description="JQUERY_SOURCE_DESC">
+					
+				
+
+					<option value="local">FROM_MODULE_CORE</option>
+					<option value="online">FROM_GOOGLE_CDN</option>
+				
+				</field>
+				<field name="btn_pos" type="list" default='bottom' label="CHECBOX_POSITION" description="CHECKBOX_POS_DESC">
+					
+				
+
+					<option value="bottom">Bottom</option>
+					<option value="upper">Top</option>
+				
+				</field>
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="0"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+			</fieldset>
+			
+			<fieldset
+				name="recaptcha">
+				
+				<field name="enablecap" type="radio" default="0" label="ENABLE_CAPTCHA" description="">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		    </field>
+
+		<field type="text" name="public" default='' label="PUBLIC_KEY"  description="PUBLIC_DESC" />
+
+		<field type="text" name="private" default='' label="PRIVATE_KEY" description="PRIVATE_DESC" />
+
+		<field type="list" name="jmtheme" default="0" label="RECAPTCHA_THEME" description="SELECT_CAP_THEME">
+			<option value="0">RED</option>
+			<option value="1">WHITE</option>
+			<option value="2">BLACKGLASS</option>
+			<option value="3">CLEAN</option>
+		</field>
+			
+
+		</fieldset>
+		
+		
+		
+			
+			
+		</fields>
+	</config>
+</extension>

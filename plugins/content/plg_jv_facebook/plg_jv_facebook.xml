@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install method="upgrade" version="1.5" type="plugin" group="content">
+	<name>JV Facebook Plugin</name>
+	<author>ZooTemplate.com</author>
+	<creationDate>November 2010</creationDate>
+	<copyright>Copyright (C) ZooTemplate 2010</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@ZooTemplate.com</authorEmail>
+	<authorUrl>www.ZooTemplate.com</authorUrl>
+	<version>1.5.7</version>
+	<description>JV FACEBOOK PLUGIN</description>
+	<files>
+		<filename plugin="plg_jv_facebook">plg_jv_facebook.php</filename>
+		<folder>plg_jv_facebook</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_plg_jv_facebook.ini</language>
+	</languages>
+	<params addpath="/plugins/content/plg_jv_facebook/elements/">
+		<param name="enable_com" type="radio" default="both" label="Show plugin for" description="Enable flugin for">
+			<option value="com_content">Joomla content</option>
+			<option value="com_k2">K2</option>
+			<option value="both">Both</option>
+		</param>
+		<param name="homepage" type="radio" default="1" label="Show plugin on the frontpage" description="Show plugin on the frontpage" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>	
+		<param name="listpage" type="radio" default="1" label="Show plugin on the list page" description="Show plugin on the list page">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="content_cate" type="categories" default="" label="Select com_content categories" description="Select categories show facebook button" />
+		<param name="k2_cate" type="categoriesK2" default="" label="Select com_k2 categories" description="Select K2 categories show facebook button" />
+		<!--article-->
+		<param name="article_select" size="10" type="multilist" default="" multiple="multiple" label="Articles of category selected"
+ description="Select one or more items from the list."> </param>
+		<param name="addremove" type="addremove" default="" label=" " description=""></param>		
+		<param name="jv_selection" type="multiselect" default="" label="Exclude article" description="Article disable show plugin">	</param>		
+		<param name="article_id" type="textarea" rows="4" cols="20" default="" label="article id" description="article id"/>
+		<param name="article_title" type="textarea" rows="4" cols="20" default="" label="article title" description="" />
+		<!-- article -->
+		<param name="@spacer" type="spacer" default="" label="" description=""/>
+		<param name="fblike_show" type="radio" default="0" label="Facebook like" description="Show facebook like button">
+			<option value="1">Show</option>
+			<option value="0">Hide</option>
+		</param>		
+		<param name="fblike_position" type="list" default="before_content" label="Position" description="Position display facebook share button" >
+			<option value="before_content">Before content</option>
+			<option value="after_content">After content</option>
+		</param>
+		<param name="fblike_layout_style" type="list" default="standard" label="Layout style" description="Determines the size and amount of social context next to the button">
+			<option value="standard">standard</option>
+			<option value="button_count">button count</option>
+			<option value="box_count">box count</option>
+		</param>
+		<param name="fblike_show_faces" type="radio" default="0" label="Show Faces" description="Show profile pictures bellow button.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="fblike_width" type="text" default="480" label="Width" description="The width of the plugin in pixels"/>
+		<param name="fblike_height" type="text" default="28" label="Height" description="The height of them plugin in pixels"/>
+		<param name="fblike_verb_display" type="list" default="like" label="Verb to display" description="The verb to display in the buton. Currently only 'like' or 'recommed' are supported.">
+			<option value="like">like</option>
+			<option value="recommend">recommend</option>
+		</param>
+		<param name="fblike_font" type="list" default="" label="Font" description="The font of the plugin">
+			<option value=""></option>
+			<option value="arial">arial</option>
+			<option value="lucida grande">lucida grande</option>
+			<option value="segeo ui">segeo ui</option>
+			<option value="tahoma">tahoma</option>
+			<option value="trebuchet ms">trebuchet ms</option>
+			<option value="verdana">verdana</option>
+		</param>
+		<param name="fblike_color_scheme" type="list" default="light" label="Color Scheme" description="The color scheme of the plugin">
+			<option value="light">light</option>
+			<option value="dark">dark</option>
+		</param>
+		<!-- facebook share button -->
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="fbshare_show" type="radio" default="0" label="Facebook Share" description="Display facebook share button">
+			<option value="1">Show</option>
+			<option value="0">Hide</option>
+		</param>
+		<param name="fbshare_pos" type="list" default="before_content" label="Button position" description="Position display facebook share button">
+			<option value="before_content">Before content</option>
+			<option value="after_content">After content</option>
+		</param>
+		<param name="fbshare_style" type="radio" default="btn" label="Button style" description="Choose button style">
+			<option value="btn"><![CDATA[Button<br />]]></option>
+			<option value="normal"><![CDATA[Button with count system above<br />]]></option>	
+			<option value="compact"><![CDATA[Button with count system beside<br />]]></option>
+		</param>
+		<!-- facebook comment  -->
+		<param name="@spacer" type="spacer" default="" label="" description=""/>
+		<param name="fbc_show" type="radio" default="0" label="Show facebook comments" description="Show facebook comment">
+			<option value="1">Show</option>
+			<option value="0">Hide</option>
+		</param>
+		<param name="fbc_appid" type="text" default="" label="App Id" description="Your facebook application id" />
+		<param name="fbc_number" type="text" default="10" label="Number of comments" description="The number of comments to display, or 0 to hide all comments"/>
+		<param name="fbc_width" type="text" default="500" label="Width" description="The width of the plugin in pixels"/>
+	</params>
+</install>

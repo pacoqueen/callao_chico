@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+    <name>iJoomla Twitter Follow</name>
+    <author>iJoomla.com</author>
+    <creationDate>June 1, 2011</creationDate>
+    <copyright>(C) 2011 iJoomla.com</copyright>
+    <license>GNU General Public License, version 2 http://www.ijoomla.com/licensing/</license>
+	<authorEmail>webmaster@ijoomla.com</authorEmail>
+    <authorUrl>www.ijoomla.com</authorUrl>
+    <version>1.0</version>
+    <description>
+        This module will add a Twitter Follow Button on your site.
+    </description>
+    <files>
+        <filename module="mod_ijoomla_twitter_follow">mod_ijoomla_twitter_follow.php</filename>
+        <filename module="mod_ijoomla_twitter_follow">index.html</filename>
+		<filename module="mod_ijoomla_twitter_follow">tmpl/default.php</filename>
+        <filename module="mod_ijoomla_twitter_follow">tmpl/index.html</filename>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="screen_name" type="text" default="ijoomla" label="Twitter Username" description="What's your user name?" />
+                <field name="bg" type="radio" default="0" label="Background Color" description="Choose dark if your template color is dark">
+                    <option value="0">Light</option>
+                    <option value="1">Dark</option>
+                </field>
+                <field name="show_count" type="radio" default="1" label="Show follower count" description="Show follower count?">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+                <field name="lang" type="list" default="en" label="Language" description="Choose language">
+                    <option value="en">English</option>
+                    <option value="fr">French</option>
+                    <option value="de">German</option>
+                    <option value="it">Italian</option>
+                    <option value="ja">Japanese</option>
+                    <option value="ko">Korean</option>
+                    <option value="ru">Russian</option>
+                    <option value="es">Spanish</option>
+                    <option value="tr">Turkish</option>
+                </field>
+                <field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="Module class suffix" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

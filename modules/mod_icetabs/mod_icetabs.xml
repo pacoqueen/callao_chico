@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<extension 
+	type="module" 
+	version="1.6.0" 
+	client="site" 
+	method="upgrade">
+    <name> </name>
+    <creationDate> </creationDate>
+    <author> </author>
+    <copyright> </copyright>
+    <authorEmail> </authorEmail>
+    <authorUrl> </authorUrl>
+    <version>1.0.0</version>
+	<description>
+	
+	</description>
+     <files>
+         <filename module="mod_icetabs">mod_icetabs.php</filename>
+         <filename module="mod_icetabs">helper.php</filename>
+		 <filename module="mod_icetabs">index.html</filename>
+		  <filename module="mod_icetabs">CHANGELOG.php</filename>
+		  <filename module="mod_icetabs">LICENSE.php</filename>
+         <folder module="mod_icetabs">libs</folder>
+		  <folder module="mod_icetabs">assets</folder>
+         <folder module="mod_icetabs">tmpl</folder>
+		   <folder module="mod_icetabs">themes</folder>
+    </files>
+
+	<languages>
+		<language tag="en-GB">languages/en-GB.mod_icetabs.ini</language>
+	</languages>
+	<config>
+    <fields
+		name="params" 
+		addfieldpath="/modules/mod_icetabs/libs/elements">
+		<fieldset name="basic">
+			<field 
+				name="moduleclass_sfx" 
+				type="text" 
+				default="" 
+				label="MODULE_CLASS_SUFFIX" 
+				description="PARAMMODULECLASSSUFFIX" />
+				
+		 
+		 
+
+		
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<field name="display_button" type="radio" default="1" label="DISPLAY_BUTTON" description="DISPLAY_BUTTON_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+			
+		
+		<field name="class_tab" type="text" default=" " label="DISPLAY_CLASS_TAB" description="Class tab (pagiation)"></field>
+	
+
+		<field name="item-content" type="list" default="introtext" label="ITEM_CONTENT" description="ITEM_CONTENT_DESC">
+    	  <option value="desc-image">Intro Text plus Image</option>
+   		  <option value="introtext">Intro Text</option>
+       </field>
+		   
+  <field name="show_readmore" type="radio" default="1" label="SHOW_READMORE" description="SHOW_READMORE_DESC">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </field>
+      
+
+    <field name="imagemain_height" type="text" default="220" label="IMAGE_MAIN_HEIGHT" description="IMAGE_MAIN_HEIGHT_DESC"></field>
+    <field name="imagemain_width" type="text" default="160" label="IMAGE_MAIN_WIDTH" description="IMAGE_MAIN_WIDTH_DESC"></field>
+    
+    
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<field name="navigator_pos" type="list" default="left" label="NAVIGATOR_POSITION" description="NAVIGATOR_POSITION_DESC">
+			<option value="0">DISABLE</option>
+			<option value="left">LEFT</option>
+			<option value="right">RIGHT</option>
+			<option value="top">TOP</option>
+			<option value="bottom">BOTTOM</option>
+		</field>
+ 			
+		<field name="navitem_height" type="text" default="100" label="NAVIGATOR_ITEM_HEIGHT" description="NAVIGATOR_ITEM_HEIGHT_DESC"></field>
+		<field name="navitem_width" type="text" default="290" label="NAVIGATOR_ITEM_WIDTH" description="NAVIGATOR_ITEM_WIDTH_DESC"></field>
+		 		
+		<field name="max_items_display" type="text" default="3" label="MAX_ITEMS_DISPLAY" description="MAX_ITEMS_DISPLAY_DESC"></field>
+		
+		
+		<field name="@spacer" type="spacer" default="" label="" description="" />		
+		
+		
+	
+	<field 
+		name="group"
+		type="folderlist"
+		hide_default="true"
+		hide_none="true" 
+		default="content" 
+		label="SELECT_GROUP" 
+		directory="modules/mod_icetabs/libs/groups/" 
+		filter=""
+		exclude="" 
+		stripext="" />
+	
+		<field 
+			type="fgroup" 
+			title="START_GROUP"
+			label=""
+			description=""
+			name="cotnentgroup"
+			group="start" 
+			for="content" />
+		<field name="source" type="radio" default="content_category" label="SOURCE_FROM"  description="SOURCE_FROM_DESC" >
+			<option value="content_category">CATEGORY</option>
+			<option value="article_ids">ARTICLES_IDS</option>
+		</field>
+		<field name="article_ids" type="text" default="" label="ARTICLES_IDS"  description="ARTICLES_IDS_DESC" size="70" />
+		<field name="content_category" type="lofcategory" default="" label="CATEGORIES_SELECTION"  description="CATEGORIES_SELECTION_DESC" />
+		
+		<field name="ordering" type="list" default="created_asc" label="ARTCILES_SORTED_BY" description="ARTCILES_SORTED_BY_DESC">
+			<option value="ordering_asc">ORDERING_ASCENDING</option>
+			<option value="ordering_desc">ORDERING_DESCENDING</option>
+			<option value="hits_asc">HIT_ASCENDING</option>
+			<option value="hits_desc">HIT_DESCENDING</option>
+			<option value="created_desc">DATE_ASCENDING</option>
+			<option value="created_asc">DATE_DESCENDING</option>
+			<option value="rand_">RANDOM</option>
+		</field>
+		
+		<field 
+				name="encontentgroup"
+				label=""
+				description=""
+				type="fgroup" 
+				title="" 
+				group="end" />
+		<field 
+				type="fgroup" 
+				title="START_GROUP_IMAGE"
+				label=""
+				description=""
+				name="imagegroup"
+				group="start" 
+				for="image" />	
+         <field name="image_folder" type="text" default="images/sampledata/fruitshop" size="40" label="IMAGE_FOLDER_PATH" description="IMAGE_FOLDER_PATH_DESC"></field>
+       
+	     <field name="image_category" type="category" extension="com_content" default="" label="IMAGE_CATEGORY" description="IMAGE_CATEGORY_DESC" >
+			<option value="">-Select one-</option>
+		 </field>
+
+               
+		 <field name="image_ordering" type="list" default="" label="IMAGE_SORTED_BY" description="IMAGE_SORTED_BY_DESC">
+			<option value="">NAME</option>
+			<option value="random">RANDOM</option>
+		</field>
+
+
+<field type="fgroup" group="end" name="imagegroupend" label="" description="" />
+			
+	
+<field type="fgroup" name="bannergroupend" label="" description="" group="end" />
+ 	
+		
+		<field name="title_1" type="lofspacer" text="Navigation_Settings" label="" description=""/>
+		<field name="limit_items" type="text" default="5" label="LIMIT_ITEMS" description="LIMIT_ITEMS_DESC" />
+		
+		<field name="auto_strip_tags" type="radio" default="0" label="STRIP_TAGS" description="STRIP_TAGS_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+		<field name="description_max_chars" type="text" default="100" label="DESCIPTION_MAX_CHARS" description="DESCIPTION_MAX_CHARS_DESC" />
+		<field name="replacer" type="text" default="..." label="REPLACER" description="REPLACER_DESC" />
+		<field name="title_max_chars" type="text" default="100" label="TITLE_MAX_CHARS" description="TITLE_MAX_CHARS_DESC" />
+		
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<field type="spacer" default="EFFECT_SETTING" />
+		
+		
+		<field name="layout_style" type="list" default="vrdown" label="PLAY_STYLE" description="PLAY_STYLE_DESC">
+			<option value="hrleft">HORIZONTAL_RIGHT_TO_LEFT</option>
+			<option value="hrright">HORIZONTAL_LEFT_TO_RIGHT</option>
+			<option value="vrup">VERTICAL_DOWN_TO_UP</option>
+			<option value="vrdown">VERTICAL_UP_TO_DOWN</option>
+			<option value="replace">REPLACE</option>
+			<option value="opacity">OPACITY</option>
+		</field>
+		
+		<field name="interval" type="text" default="2000" label="INTERVAL" description="INTERVAL_DESC" />
+		<field name="duration" type="text" default="700" label="ANIMATION_DURATION" description="ANIMATION_DURATION_DESC" />
+		<field name="effect" type="list" default="Fx.Transitions.Sine.easeInOut" label="ANIMATION_TRANSITION" description="ANIMATION_TRANSITION_DESC">
+		   <option value="Fx.Transitions.linear">linear</option>
+		    <option value="Fx.Transitions.quartOut">QuartOut</option>
+			<option value="Fx.Transitions.Quad.easeIn">Quad.easeIn</option>
+			<option value="Fx.Transitions.Quad.easeOut">Quad.easeOut</option>
+			<option value="Fx.Transitions.Quad.easeInOut">Quad.easeInOut</option>
+			<option value="Fx.Transitions.Cubic.easeIn">Cubic.easeIn</option>
+			<option value="Fx.Transitions.Cubic.easeOut">Cubic.easeOut</option>
+			<option value="Fx.Transitions.Cubic.easeInOut">Cubic.easeInOut</option>
+			<option value="Fx.Transitions.Quart.easeIn">Quart.easeIn</option>
+			<option value="Fx.Transitions.Quart.easeOut">Quart.easeOut</option>
+			<option value="Fx.Transitions.Quart.easeInOut">Quart.easeInOut</option>
+			<option value="Fx.Transitions.Quint.easeIn">Quint.easeIn</option>
+			<option value="Fx.Transitions.Quint.easeOut">Quint.easeOut</option>
+			<option value="Fx.Transitions.Quint.easeInOut">Quint.easeInOut</option>
+			<option value="Fx.Transitions.Pow.easeIn">Pow.easeIn</option>
+			<option value="Fx.Transitions.Pow.easeOut">Pow.easeOut</option>
+			<option value="Fx.Transitions.Pow.easeInOut">Pow.easeInOut</option>
+			<option value="Fx.Transitions.Expo.easeIn">Expo.easeIn</option>
+			<option value="Fx.Transitions.Expo.easeOut">Expo.easeOut</option>
+			<option value="Fx.Transitions.Expo.easeInOut">Expo.easeInOut</option>
+			<option value="Fx.Transitions.Circ.easeIn">Circ.easeIn</option>
+			<option value="Fx.Transitions.Circ.easeOut">Circ.easeOut</option>
+			<option value="Fx.Transitions.Circ.easeInOut">Circ.easeInOut</option>
+			<option value="Fx.Transitions.Sine.easeIn">Sine.easeIn</option>
+			<option value="Fx.Transitions.Sine.easeOut">Sine.easeOut</option>
+			<option value="Fx.Transitions.Sine.easeInOut">Sine.easeInOut</option>
+			<option value="Fx.Transitions.Back.easeIn">Back.easeIn</option>
+			<option value="Fx.Transitions.Back.easeOut">Back.easeOut</option>
+			<option value="Fx.Transitions.Back.easeInOut">Back.easeInOut</option>
+			<option value="Fx.Transitions.Bounce.easeIn">Bounce.easeIn</option>
+			<option value="Fx.Transitions.Bounce.easeOut">Bounce.easeOut</option>
+			<option value="Fx.Transitions.Bounce.easeInOut">Bounce.easeInOut</option>
+			<option value="Fx.Transitions.Elastic.easeIn">Elastic.easeIn</option>
+			<option value="Fx.Transitions.Elastic.easeOut">Elastic.easeOut</option>
+			<option value="Fx.Transitions.Elastic.easeInOut">Elastic.easeInOut</option>				  
+        </field> 
+		
+		<field name="auto_start" type="radio" default="1" label="AUTO_START" description="AUTO_START_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		
+		
+		<!--param name="navigator_event" type="list" default="right" label="NAVIGATOR EVENT HANDLER" description="NAVIGATOR EVENT HANDLER DESC">
+			<option value="click">CLICK</option>
+			<option value="mouseover">HOVER</option>
+		</param-->
+	</fieldset>
+	<fieldset name="advanced">
+		<field name="enable_cache" type="list" default="0" label="CACHING" description="CACHING_DESC">
+			<option value="1">Use Cache Data</option>
+			<option value="0">Don't cache</option>
+		</field>
+		<field name="cache_time" type="text" default="15" label="CACHE_TIME" description="CACHE_TIME_DESC" />
+		
+		
+	</fieldset>
+		
+	</fields>
+	</config>	
+</extension>

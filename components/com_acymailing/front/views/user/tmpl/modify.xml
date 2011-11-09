@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="User : subscribe/modify your subscription">
+		<message>This menu item enables your visitors or logged-in users to subscribe/modify their subscription.</message>
+	</layout>
+	<state>
+		<name>User : subscribe/modify your subscription</name>
+		<params addpath="/components/com_acymailing/params">
+			<param name="help" type="help" default="componentsubscribe" label="Help" description="Click on the help button to get some help" />
+			<param name="lists" type="lists" default="All" label="VISIBLE_LISTS" description="The following selected lists will be displayed on your subscribe form." />
+			<param name="listschecked" type="lists" default="All" label="LISTS_CHECKED_DEFAULT" description="The selected lists will be checked by default on your form." />
+			<param name="@spacer" type="spacer" default="" label="" description="" />
+			<param name="introtext" type="textarea" rows="5" cols="35" default="" label="INTRO_TEXT" description="This text will be displayed before the form inside a span class=acymailing_introtext" />
+			<param name="finaltext" type="textarea" rows="5" cols="35" default="" label="POST_TEXT" description="This text will be displayed after the form inside a span class=acymailing_finaltext" />
+		</params>
+	</state>
+	<fields name="params" addfieldpath="/components/com_acymailing/params">
+		<fieldset name="basic">
+			<field name="help" type="help" default="componentsubscribe" label="Help" description="Click on the help button to get some help" />
+			<field name="lists" type="lists" default="All" label="VISIBLE_LISTS" description="The following selected lists will be displayed on your subscribe form." />
+			<field name="listschecked" type="lists" default="All" label="LISTS_CHECKED_DEFAULT" description="The selected lists will be checked by default on your form." />
+			<field name="@spacer" type="spacer" default="" label="" description="" />
+			<field name="introtext" type="textarea" rows="5" cols="35" default="" label="INTRO_TEXT" description="This text will be displayed before the form inside a span class=acymailing_introtext" />
+			<field name="finaltext" type="textarea" rows="5" cols="35" default="" label="POST_TEXT" description="This text will be displayed after the form inside a span class=acymailing_finaltext" />
+		</fieldset>
+	</fields>
+</metadata>

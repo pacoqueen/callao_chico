@@ -1,0 +1,48 @@
+.carouselLeft {	
+	display:none;
+	background:url(../images/rotate-left.png);	
+	width:40px; height:40px;
+	background-position: 0px 0px;
+  position: absolute;
+  top: 20px;
+  right: 64px;
+  display: inline;
+  cursor:pointer;
+}
+
+.carouselLeft:hover {		
+	width:40px; height:40px;
+	background-position: 0px 40px;
+	cursor:auto;
+  cursor:pointer;
+}
+
+.carouselRight {
+	display:none;
+	background:url(../images/rotate-right.png);	
+	width:40px; height:40px;
+	background-position: 0px 0px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: inline;
+  cursor:pointer;
+}
+
+.carouselRight:hover {	
+	width:40px; height:40px;
+	background-position: 0px 40px;
+  cursor:pointer;
+}
+
+.cloud_carousel_title {
+	color:#f90;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:17px;
+	font-weight:bold;
+	margin:20px;
+	text-transform:uppercase;
+	letter-spacing:1px;
+	margin-bottom:10px;
+	width:80%;
+} 

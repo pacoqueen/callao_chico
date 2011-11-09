@@ -1,0 +1,20 @@
+/* TEAM */
+Designer: Moisés Valverde Alonso
+Site: http://moisesvalverde.es
+Contact: info@moisesvalverde.es
+From: Badajoz, Extremadura, Spain
+
+Sysadmin: Juan López Valverde
+Contact: jlopez@novaweb.es
+From: Seville, Andalusia, Spain
+
+Developer: Francisco José Rodríguez Bogado
+Site: http://www.qinn.es
+Contact: bogado@qinn.es
+From: Huelva, Andalusia, Spain
+
+/* SITE */ 
+Last update: 2011/08/17
+Language: Castellano / English
+Software: Joomla 1.6
+

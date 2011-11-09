@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Mailing Lists Archive">
+		<message>This menu enables you to display all AcyMailing Mailing Lists on your website in order to see the archive Newsletters</message>
+	</layout>
+	<state>
+		<name>Mailing Lists Archive</name>
+	</state>
+</metadata>

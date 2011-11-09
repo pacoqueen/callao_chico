@@ -1,0 +1,23 @@
+.jv-fblike-button
+	{
+		float:left;
+	}
+.jv-fbshare-button,.jv-fbshare-button-nocount
+	{
+		float:left;
+	}
+	
+.jv-fbshare-button-nocount .fb_share_count_nub_right
+	{
+		background:none !important;
+	}
+.jv-fbshare-button-nocount .fb_share_count_right
+	{
+		display:none;
+	}
+.jv-social-share-button-contain
+	{
+		clear:both;
+		width:100%;
+		overflow:hidden;
+	}

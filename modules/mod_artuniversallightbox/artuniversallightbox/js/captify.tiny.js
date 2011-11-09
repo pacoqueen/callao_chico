@@ -1,0 +1,13 @@
+jQuery.fn.extend({captify:function(n){var a=jQuery.extend({speedOver:"fast",speedOut:"normal",hideDelay:500,animation:"slide",prefix:"",opacity:"0.45",className:"caption-bottom",position:"bottom",spanWidth:"100%"},n);jQuery(this).each(function(){var c=this;jQuery(this).load(function(){if(c.hasInit)return false;c.hasInit=true;var i=false,k=false,e=jQuery("#"+jQuery(this).attr("rel")),g=!e.length?jQuery(this).attr("rel"):e.html();e.remove();e=this.parent&&this.parent.tagName=="a"?this.parent:jQuery(this);var h=e.wrap("<div></div>").parent().css({overflow:"hidden",
+padding:0,fontSize:0.1}).addClass("caption-wrapper").width(jQuery(this).width()).height(jQuery(this).height());jQuery.map(["top","right","bottom","left"],function(f){h.css("margin-"+f,jQuery(c).css("margin-"+f));jQuery.map(["style","width","color"],function(j){j="border-"+f+"-"+j;h.css(j,jQuery(c).css(j))})});jQuery(c).css({border:"0 none"});var b=jQuery("div:last",h.append("<div></div>")).addClass(a.className),d=jQuery("div:last",h.append("<div></div>")).addClass(a.className).append(a.prefix).append(g);jQuery("*",h).css({margin:0}).show();g=jQuery.browser.msie?
+"static":"relative";b.css({zIndex:1,position:g,opacity:a.animation=="fade"?0:a.opacity,width:a.spanWidth});if(a.position=="bottom"){e=parseInt(b.css("border-top-width").replace("px",""))+parseInt(d.css("padding-top").replace("px",""))-1;d.css("paddingTop",e)}d.css({position:g,zIndex:2,background:"none",border:"0 none",opacity:a.animation=="fade"?0:1,width:a.spanWidth});if (d && d.outerWidth) {b.width(d.outerWidth())} else {b.width(d.width());};b.height(d.height());g=a.position=="bottom"&&jQuery.browser.msie?-4:0;
+
+if (b && b.outerHeight) {
+  vheight = b.outerHeight();
+} else {
+  vheight = b.height();
+}
+
+var l=a.position=="top"?{hide:-jQuery(c).height()-
+vheight-1,show:-jQuery(c).height()}:{hide:0,show:-vheight+g};d.css("marginTop",-vheight);b.css("marginTop",l[a.animation=="fade"||a.animation=="always-on"?"show":"hide"]);var m=function(){if(!i&&!k){var f=a.animation=="fade"?{opacity:0}:{marginTop:l.hide};b.animate(f,a.speedOut);a.animation=="fade"&&d.animate({opacity:0},a.speedOver)}};if(a.animation!="always-on"){jQuery(this).hover(function(){k=true;if(!i){var f=a.animation=="fade"?{opacity:a.opacity}:{marginTop:l.show};b.animate(f,
+a.speedOver);a.animation=="fade"&&d.animate({opacity:1},a.speedOver/2)}},function(){k=false;window.setTimeout(m,a.hideDelay)});jQuery("div",h).hover(function(){i=true},function(){i=false;window.setTimeout(m,a.hideDelay)})}});if(this.complete||this.naturalWidth>0)jQuery(c).trigger("load")})}});

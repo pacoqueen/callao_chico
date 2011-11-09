@@ -1,0 +1,2 @@
+; XXX: Callao chico
+; 20110423: [frbogado] Parcialmente traducidos los dos ficheros de loginRegister.

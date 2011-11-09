@@ -1,0 +1,3 @@
+components/com_users/models/forms/registration.xml:			message="COM_USERS_REGISTER_EMAIL1_MESSAGE"
+language/en-GB/en-GB.com_users.ini:COM_USERS_REGISTER_EMAIL1_MESSAGE="The email address you entered is already in use or invalid. Please enter another email address."
+language/es-ES/es-ES.com_users.ini:COM_USERS_REGISTER_EMAIL1_MESSAGE="La dirección de correo electrónico que ha introducido ya está en uso o no es válida. Por favor, introduzca otra dirección de correo electrónicol."

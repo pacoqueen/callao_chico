@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+	<name>Nivo-Szaki Slider</name>
+	<copyright>Copyright (C) 2011 szathmári.hu. All Rights Reserved.</copyright>
+	<license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+	<version>1.0</version>
+	<creationDate>01-27-2011</creationDate>
+	<author>szathmari.hu</author>
+	<authorEmail>info@szathmari.hu</authorEmail>
+	<authorUrl>http://szathmari.hu</authorUrl>
+	<description>MOD_NIVOSLIDER_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_nivoslider">mod_nivoslider.php</filename>
+		<folder>assets/</folder>
+        <folder>tmpl/</folder>
+        <filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>mod_nivoslider.xml</filename>		
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_nivoslider.ini</language>
+		<language tag="hu-HU">hu-HU.mod_nivoslider.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_NIVOSLIDER" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="imagesDir" type="text" default="images/banners/" label="IMAGESDIR" description="IMAGESDIR_DESC" />
+				<field name="subDir" type="list" default="0" label="SUBDIR" description="SUBDIR_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="imagesAttributes" type="textarea" default="Image1\|Nivo-Szaki Slider\|#link1&lt;br /&gt;&lt;br /&gt;3rd image|3rd slide|" label="IMAGESATTRIBUTES" description="IMAGESATTRIBUTES_DESC" rows="10" cols="50" />
+				<field name="target" type="list" default="_self" label="TARGET" description="TARGET_DESC">
+					<option value="_self">_self</option>
+					<option value="_blank">_blank</option>
+					<option value="_parent">_parent</option>
+					<option value="_top">_top</option>
+				</field>
+				<field name="@sp1" type="spacer" default="" label="" description="" />
+				<field name="style" type="list" default="enhanced" label="STYLE" description="STYLE_DESC">
+					<option value="enhanced">Enhanced</option>
+					<option value="default">Default</option>
+				</field>
+				<field name="customStyle" type="textarea" rows="10" cols="50" label="CUSTOMSTYLE" description="CUSTOMSTYLE_DESC" />
+		
+				<field name="soundFX" type="list" default="0" label="SOUNDFX" description="SOUNDFX_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="sound" type="text" default="nivo-szakislider.ogg" label="SOUND" description="SOUND_DESC" />
+				<field name="soundVol" type="list" default="1" label="SOUNDVOL" description="SOUNDVOL_DESC">
+					<option value="1">100%</option>
+					<option value="0.75">75%</option>
+					<option value="0.5">50%</option>
+					<option value="0.25">25%</option>
+					<option value="0.1">10%</option>
+				</field>
+		
+				<field name="effect" type="list" default="random" label="EFFECT" description="EFFECT_DESC">
+					<option value="random">Random</option>
+					<option value="sliceDown">Slice Down</option>
+					<option value="sliceDownLeft">Slice Down Left</option>
+					<option value="sliceUp">Slice Up</option>
+					<option value="sliceUpLeft">Slice Up Left</option>
+					<option value="sliceUpDown">Slice Up Down</option>
+					<option value="sliceUpDownLeft">Slice Up Down Left</option>
+					<option value="fold">Fold</option>
+					<option value="fade">Fade</option>
+				</field>
+				<field name="slices" type="text" default="15" size="10" label="SLICES" description="SLICES_DESC" />
+				<field name="animSpeed" type="text" default="500" size="10" label="ANIMSPEED" description="ANIMSPEED_DESC" />
+				<field name="pauseTime" type="text" default="3000" size="10" label="PAUSETIME" description="PAUSETIME_DESC" />
+				<field name="startSlide" type="text" default="0" size="10" label="STARTSLIDE" description="STARTSLIDE_DESC" />
+				<field name="@sp2" type="spacer" default="" label="" description="" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="directionNav" type="list" default="1" label="DIRECTIONNAV" description="DIRECTIONNAV_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="directionNavHide" type="list" default="1" label="DIRECTIONNAVHIDE" description="DIRECTIONNAVHIDE_DESC">
+				<option value="1">Yes</option>
+				<option value="0">No</option>
+				</field>
+				<field name="controlNav" type="list" default="1" label="CONTROLNAV" description="CONTROLNAV_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="controlNavThumbs" type="list" default="1" label="CONTROLNAVTHUMBS" description="CONTROLNAVTHUMBS_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="controlNavThumbsSearch" type="text" default=".jpg" size="10" label="CONTROLNAVTHUMBSSEARCH" description="CONTROLNAVTHUMBSSEARCH_DESC" />
+				<field name="controlNavThumbsReplace" type="text" default="_thumb.jpg" size="10" label="CONTROLNAVTHUMBSREPLACE" description="CONTROLNAVTHUMBSREPLACE_DESC" />
+				<field name="keyboardNav" type="list" default="1" label="KEYBOARDNAV" description="KEYBOARDNAV_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="pauseOnHover" type="list" default="1" label="PAUSEONHOVER" description="PAUSEONHOVER_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="manualAdvance" type="list" default="0" label="MANUALADVANCE" description="MANUALADVANCE_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="captionOpacity" type="text" default="0.8" size="10" label="CAPTIONOPACITY" description="CAPTIONOPACITY_DESC" />
+				<field name="@sp3" type="spacer" default="" label="" description="" />
+				<field name="jQuery" type="list" default="1" label="JQUERY" description="JQUERY_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>	
+</extension>

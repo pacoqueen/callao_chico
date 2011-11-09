@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+	<name>Easy File Uploader</name>
+	<author>Michael Gilkes</author>
+	<creationDate>March 2010</creationDate>
+	<copyright>Copyright (C) 2010 Michael Albert Gilkes. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2</license>
+	<authorEmail>jaido7@yahoo.com</authorEmail>
+	<authorUrl>http://www.michaelgilkes.info</authorUrl>
+	<version>0.8 (J16)</version>
+	<description>This is a flexible file upload module. It allows the administrator to specify a destination folder, and allows the user to upload files to it. The administrator can also specify how many files that can be uploaded simultaneously, as well as the text in the front end. You can even have more then one module of its kind on the same page. See readme.txt for usage instructions.</description>
+	<files>
+		<filename module="mod_easyfileuploader">mod_easyfileuploader.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>readme.txt</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			<field name="efu_titulo" type="text" default="Titulo" label="Title" description="Titulo" />
+			<field name="efu_texto1_enabled" type="list" default="0" label="Vista Campo1" description="Habilitar campo.">
+					<option value="0">Deshabilitado</option>
+					<option value="1">Opcional</option>
+					<option value="2">Obligatorio</option>
+			</field>
+			<field name="efu_texto1" type="text" default="" label="Campo 1" description="Entre el campo1." />
+			
+			<field name="efu_texto2_enabled" type="list" default="0" label="Vista Campo2" description="Habilitar campo.">
+					<option value="0">Deshabilitado</option>
+					<option value="1">Opcional</option>
+					<option value="2">Obligatorio</option>
+			</field>
+			<field name="efu_texto2" type="text" default="" label="Campo 2" description="Entre el campo2." />
+			<field name="efu_texto3_enabled" type="list" default="0" label="Vista Campo3" description="Habilitar campo.">
+					<option value="0">Deshabilitado</option>
+					<option value="1">Opcional</option>
+					<option value="2">Obligatorio</option>
+			</field>
+			<field name="efu_texto3" type="text" default="" label="Campo 3" description="Entre el campo3." />
+			
+
+				<field name="efu_texto4_enabled" type="list" default="0" label="Vista Campo4" description="Habilitar campo.">
+					<option value="0">Deshabilitado</option>
+					<option value="1">Opcional</option>
+					<option value="2">Obligatorio</option>
+			</field>
+			<field name="efu_texto4" type="text" default="" label="Campo 4" description="Entre el campo4." />
+			
+			
+			<field name="efu_texto5_enabled" type="list" default="0" label="Vista Campo5" description="Habilitar campo.">
+					<option value="0">Deshabilitado</option>
+					<option value="1">Opcional</option>
+					<option value="2">Obligatorio</option>
+			</field>
+			<field name="efu_texto5" type="text" default="" label="Campo 5" description="Entre el campo5." />
+			
+			
+			<field name="efu_textarea1_enabled" type="list" default="0" label="Vista Text Area 1" description="Habilitar campo.">
+					<option value="0">Deshabilitado</option>
+					<option value="1">Opcional</option>
+					<option value="2">Obligatorio</option>
+			</field>
+			<field name="efu_textarea1" type="input" default="" label="Text Area 1" description="Entre el Texto." />
+			
+
+			<field name="efu_checkbox1_enabled" type="list" default="0" label="Vista Checkbox 1" description="Habilitar campo.">
+					<option value="0">Deshabilitado</option>
+					<option value="1">Opcional</option>
+					<option value="2">Obligatorio</option>
+			</field>
+			<field name="efu_checkbox1" type="input" default="" label="Check Box 1" description="Entre el Texto." />
+			
+			
+			
+			<field name="efu_mailto" type="text" default="" label="Mail to" description="Destinatario correo." />
+			<field name="efu_mailok" type="text" default="" label="Mail ok" description="El correo se ha enviado." />
+			<field name="efu_mailnok" type="text" default="" label="Mail nok" description="Error en el envio de correo." />
+			<field name="efu_mailnoreply" type="text" default="" label="Mail Noreply" description="Correo del remitente de formulario." />
+			<field name="efu_mailnoreplyname" type="text" default="" label="Mail Noreply Name" description="Nombre de correo del remitente de formulario." />
+			<field name="efu_fileupload1_enabled" type="list" default="0" label="Activar Upload FILE1" description="Activar Uplaod FILE1.">
+					<option value="0">Deshabilitado</option>
+					<option value="1">Opcional</option>
+					<option value="2">Obligatorio</option>
+			</field>
+			
+				<field name="efu_labelfileupload1" type="text" default="" label="Label Upload file1" description="This is the text that labels the upload file form." />
+				<field name="efu_button" type="text" default="Upload File" label="Submit Button Text" description="This is the text that is on the button to upload the file." />
+				
+				
+				
+				<field name="efu_submitbutton_enabled" type="list" default="1" label="Hablitar Boton Submit" description="Hablitar Boton Submit.">
+					<option value="0">Deshabilitado</option>
+					<option value="1">Habilitar</option>
+				</field>
+				
+				<field name="efu_folder" type="folderlist" default="stories" label="Choose the Upload Folder" directory="images" description="This is the folder where the uploaded files are stored." hide_none="true" hide_default="true" />
+				<field name="efu_maxsize" type="text" default="1000000" label="Maximum File Size (bytes)" description="This is the maximum allowable file size, in bytes, that can be uploaded." />
+				<field name="results_bgcolor" type="text" default="fab700" label="Results Box Background Color" description="The background color of the Results information box." />
+				<field name="@spacer" type="spacer" default="" label="" description="" />
+				<field name="efu_filetypes" type="textarea" default="image/gif;image/jpeg;image/pjpeg;image/png;application/pdf;application/msword;application/zip;application/x-compressed;application/x-zip-compressed;multipart/x-zip;application/excel;application/vnd.ms-excel;application/x-excel;application/x-msexcel" label="Permitted file types (separate by semi-colon)." description="This is a list of the file types that are permitted to be uploaded (separated by semi-colon). Type asterisk (*) to allow any type." rows="10" cols="40" />
+			<field name="efu_flash_enabled" type="list" default="0" label="Hablitar Flash" description="Habilitar Flash.">
+					<option value="0">Deshabilitado</option>
+					<option value="1">Habilitar</option>
+					
+			</field>
+			<field name="efu_flashfilename" type="text" default="" label="Flash file Name" description="Nombre del archivo flash." />
+			
+			
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="efu_question" type="text" default="Replace existing files with uploaded files?" label="Replace Files Question" description="This is the text that labels the option of whether the user wants to replace existing files." />
+				<field name="efu_yes" type="text" default="Yes" label="Yes answer text" description="You are free to customize the YES answer text to the replace question." />
+				<field name="efu_no" type="text" default="No" label="No answer text" description="You care free to customize the NO answer text to the replace question." />
+				<field name="efu_replace" type="list" default="1" label="Include option to replace existing file?" description="This allows the administrator to decide whether to include an option in the front-end to replace en existing file with the same file name as the file to be uploaded.">
+					<option value="0">Yes</option>
+					<option value="1">No</option>
+				</field>
+				<field name="@spacer" type="spacer" default="" label="" description="" />
+				<field name="efu_variable" type="text" default="fileToUpload" label="Input File Variable Name" description="This allows you to specify the variable name of the input file. Only change this if you intend to have more than one Easy File Uploader module on a single article page. In that case, each module should have its own unique name." />
+				<field name="efu_multiple" type="list" default="1" label="Number of Files to Upload" description="Select the number of upload file fields to include. The default is to upload 1 file, but you may select up to 10 files to upload simultaneously.">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

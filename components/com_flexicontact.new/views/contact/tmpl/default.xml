@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+
+<layout title="COM_FLEXICONTACT_VIEW_TITLE_CONTACT">
+	<message>
+	</message>
+</layout>
+
+<state>
+	<name>COM_FLEXICONTACT_VIEW_TITLE_CONTACT</name>
+	
+	<description></description>
+
+<!-- Joomla 1.6 version -->
+	
+<config><fields name="params"><fieldset name="basic">
+	<field name="page_hdr" type="text" size="40" default="" label="COM_FLEXICONTACT_V_PAGE_TITLE" description="" />
+	<field name="page_text" type="textarea" filter="safehtml" rows="8" cols="60" default="" label="COM_FLEXICONTACT_V_TOP_TEXT" description="COM_FLEXICONTACT_V_TOP_TEXT_DESC" />
+	<field name="image" type="imagelist" directory="/images" hide_default="1" default="-1" label="COM_FLEXICONTACT_V_IMAGE" description="COM_FLEXICONTACT_V_IMAGE_DESC" />
+	<field name="image_align" type="radio" default="right" label="COM_FLEXICONTACT_V_IMAGE_ALIGN" description="">
+		<option value="left">COM_FLEXICONTACT_V_LEFT</option>
+		<option value="right">COM_FLEXICONTACT_V_RIGHT</option>
+	</field>
+
+	<field name="@spacer" type="spacer" default="" label="" description="" />
+	<field name="toPrimary" type="text" size="40" default="" label="COM_FLEXICONTACT_V_EMAIL_TO" description="COM_FLEXICONTACT_V_EMAIL_DESC" />
+	<field name="ccAddress" type="text" size="40" default="" label="COM_FLEXICONTACT_V_EMAIL_CC" description="COM_FLEXICONTACT_V_EMAIL_DESC" />
+	<field name="bccAddress" type="text" size="40" default="" label="COM_FLEXICONTACT_V_EMAIL_BCC" description="COM_FLEXICONTACT_V_EMAIL_DESC" />
+	<field name="autofill" type="list" default="off" label="COM_FLEXICONTACT_V_AUTOFILL" description="COM_FLEXICONTACT_V_AUTOFILL_DESC">
+		<option value="off">COM_FLEXICONTACT_V_NO</option>
+		<option value="username">COM_FLEXICONTACT_V_AUTOFILL_USERNAME</option>
+		<option value="name">COM_FLEXICONTACT_V_AUTOFILL_NAME</option>
+	</field>
+	
+	<field name="@spacer" type="spacer" default="" label="" description="" />
+	<field name="num_images" type="text" size="5" default="0" label="COM_FLEXICONTACT_V_CAPTCHA_NUMBER" description="COM_FLEXICONTACT_V_CAPTCHA_DESC" />
+	<field name="magic_word" type="text" size="30" default="" label="COM_FLEXICONTACT_V_MAGIC_WORD" description="COM_FLEXICONTACT_V_MAGIC_WORD_DESC" />
+
+	<field name="@spacer" type="spacer" default="" label="" description="" />
+	<field name="subject" type="radio" default="yes" label="COM_FLEXICONTACT_V_SHOW_SUBJECT" description="COM_FLEXICONTACT_V_SHOW_SUBJECT_DESC">
+		<option value="yes">COM_FLEXICONTACT_V_YES</option>
+		<option value="no">COM_FLEXICONTACT_V_NO</option>
+	</field>
+	<field name="default_subject" type="text" size="40" default="" label="COM_FLEXICONTACT_V_DEFAULT_SUBJECT" description="COM_FLEXICONTACT_V_DEFAULT_SUBJECT_DESC" />
+
+	<field name="@spacer" type="spacer" default="" label="" description="" />
+	<field name="list_opt" type="list" default="disabled" label="COM_FLEXICONTACT_V_LIST" description="COM_FLEXICONTACT_V_LIST_DESC">
+		<option value="disabled">COM_FLEXICONTACT_V_DISABLED</option>
+		<option value="optional">COM_FLEXICONTACT_V_OPTIONAL</option>
+		<option value="mandatory">COM_FLEXICONTACT_V_MANDATORY</option>
+	</field>
+	<field name="list_prompt" type="text" size="40" default="" label="COM_FLEXICONTACT_V_PROMPT" description="COM_FLEXICONTACT_V_LIST_ITEMS_PROMPT_DESC" />
+	<field name="list_list" type="textarea" rows="6" cols="35" default="" label="COM_FLEXICONTACT_V_LIST_ITEMS" description="COM_FLEXICONTACT_V_LIST_ITEMS_DESC" />
+	
+	<field name="@spacer" type="spacer" default="" label="" description="" />
+	<field name="opt1" type="list" default="disabled" label="COM_FLEXICONTACT_V_LINE_1" description="COM_FLEXICONTACT_V_TEXT_FIELD_DESC">
+		<option value="disabled">COM_FLEXICONTACT_V_DISABLED</option>
+		<option value="optional">COM_FLEXICONTACT_V_OPTIONAL</option>
+		<option value="mandatory">COM_FLEXICONTACT_V_MANDATORY</option>
+	</field>
+	<field name="prompt1" type="text" size="40" default="" label="COM_FLEXICONTACT_V_PROMPT" description="The prompt for this field" />
+
+	<field name="@spacer" type="spacer" default="" label="" description="" />
+	<field name="opt2" type="list" default="disabled" label="COM_FLEXICONTACT_V_LINE_2" description="COM_FLEXICONTACT_V_TEXT_FIELD_DESC">
+		<option value="disabled">COM_FLEXICONTACT_V_DISABLED</option>
+		<option value="optional">COM_FLEXICONTACT_V_OPTIONAL</option>
+		<option value="mandatory">COM_FLEXICONTACT_V_MANDATORY</option>
+	</field>
+	<field name="prompt2" type="text" size="40" default="" label="COM_FLEXICONTACT_V_PROMPT" description="COM_FLEXICONTACT_V_PROMPT_DESC" />
+
+	<field name="@spacer" type="spacer" default="" label="" description="" />
+	<field name="opt3" type="list" default="disabled" label="COM_FLEXICONTACT_V_LINE_3" description="COM_FLEXICONTACT_V_TEXT_FIELD_DESC">
+		<option value="disabled">COM_FLEXICONTACT_V_DISABLED</option>
+		<option value="optional">COM_FLEXICONTACT_V_OPTIONAL</option>
+		<option value="mandatory">COM_FLEXICONTACT_V_MANDATORY</option>
+	</field>
+	<field name="prompt3" type="text" size="40" default="" label="COM_FLEXICONTACT_V_PROMPT" description="COM_FLEXICONTACT_V_PROMPT_DESC" />
+
+	<field name="@spacer" type="spacer" default="" label="" description="" />
+	<field name="opt4" type="list" default="disabled" label="COM_FLEXICONTACT_V_LINE_4" description="COM_FLEXICONTACT_V_TEXT_FIELD_DESC">
+		<option value="disabled">COM_FLEXICONTACT_V_DISABLED</option>
+		<option value="optional">COM_FLEXICONTACT_V_OPTIONAL</option>
+		<option value="mandatory">COM_FLEXICONTACT_V_MANDATORY</option>
+	</field>
+	<field name="prompt4" type="text" size="40" default="" label="COM_FLEXICONTACT_V_PROMPT" description="COM_FLEXICONTACT_V_PROMPT_DESC" />
+
+	<field name="@spacer" type="spacer" default="" label="" description="" />
+	<field name="opt5" type="list" default="disabled" label="COM_FLEXICONTACT_V_LINE_5" description="COM_FLEXICONTACT_V_TEXT_FIELD_DESC">
+		<option value="disabled">COM_FLEXICONTACT_V_DISABLED</option>
+		<option value="optional">COM_FLEXICONTACT_V_OPTIONAL</option>
+		<option value="mandatory">COM_FLEXICONTACT_V_MANDATORY</option>
+	</field>
+	<field name="prompt5" type="text" size="40" default="" label="COM_FLEXICONTACT_V_PROMPT" description="COM_FLEXICONTACT_V_PROMPT_DESC" />
+
+	<field name="@spacer" type="spacer" default="" label="" description="" />
+	<field name="area-opt" type="list" default="optional" label="COM_FLEXICONTACT_V_TEXT_AREA" description="COM_FLEXICONTACT_V_TEXT_AREA_DESC">
+		<option value="disabled">COM_FLEXICONTACT_V_DISABLED</option>
+		<option value="optional">COM_FLEXICONTACT_V_OPTIONAL</option>
+		<option value="mandatory">COM_FLEXICONTACT_V_MANDATORY</option>
+	</field>
+	<field name="area-prompt" type="text" size="40" default="" label="COM_FLEXICONTACT_V_PROMPT" description="COM_FLEXICONTACT_V_TEXT_AREA_PROMPT_DESC" />
+	<field name="area-width" type="text" size="5" default="40" label="COM_FLEXICONTACT_V_WIDTH" description="COM_FLEXICONTACT_V_TEXT_AREA_WIDTH_DESC" />
+	<field name="area-height" type="text" size="5" default="15" label="COM_FLEXICONTACT_V_HEIGHT" description="COM_FLEXICONTACT_V_TEXT_AREA_HEIGHT_DESC" />
+	<field name="@spacer" type="spacer" default="" label="" description="" />
+	<field name="bottom_text" type="textarea" filter="safehtml" rows="8" cols="60" default="" label="COM_FLEXICONTACT_V_BOTTOM_TEXT" description="COM_FLEXICONTACT_V_BOTTOM_TEXT_DESC" />
+</fieldset></fields></config>
+
+<!-- Joomla 1.5 version -->
+
+<params>
+	<param name="page_hdr" type="text" size="40" default="" label="COM_FLEXICONTACT_V_PAGE_TITLE" description="" />
+	<param name="page_text" type="textarea" rows="8" cols="60" default="" label="COM_FLEXICONTACT_V_TOP_TEXT" description="COM_FLEXICONTACT_V_TOP_TEXT_DESC" />
+	<param name="image" type="imagelist" directory="/images" hide_default="1" default="-1" label="COM_FLEXICONTACT_V_IMAGE" description="COM_FLEXICONTACT_V_IMAGE_DESC" />
+	<param name="image_align" type="radio" default="right" label="COM_FLEXICONTACT_V_IMAGE_ALIGN" description="">
+		<option value="left">COM_FLEXICONTACT_V_LEFT</option>
+		<option value="right">COM_FLEXICONTACT_V_RIGHT</option>
+	</param>
+
+	<param name="@spacer" type="spacer" default="" label="" description="" />
+	<param name="toPrimary" type="text" size="40" default="" label="COM_FLEXICONTACT_V_EMAIL_TO" description="COM_FLEXICONTACT_V_EMAIL_DESC" />
+	<param name="ccAddress" type="text" size="40" default="" label="COM_FLEXICONTACT_V_EMAIL_CC" description="COM_FLEXICONTACT_V_EMAIL_DESC" />
+	<param name="bccAddress" type="text" size="40" default="" label="COM_FLEXICONTACT_V_EMAIL_BCC" description="COM_FLEXICONTACT_V_EMAIL_DESC" />
+	<param name="autofill" type="list" default="off" label="COM_FLEXICONTACT_V_AUTOFILL" description="COM_FLEXICONTACT_V_AUTOFILL_DESC">
+		<option value="off">COM_FLEXICONTACT_V_NO</option>
+		<option value="username">COM_FLEXICONTACT_V_AUTOFILL_USERNAME</option>
+		<option value="name">COM_FLEXICONTACT_V_AUTOFILL_NAME</option>
+	</param>
+	
+	<param name="@spacer" type="spacer" default="" label="" description="" />
+	<param name="num_images" type="text" size="5" default="0" label="COM_FLEXICONTACT_V_CAPTCHA_NUMBER" description="COM_FLEXICONTACT_V_CAPTCHA_DESC" />
+	<param name="magic_word" type="text" size="30" default="" label="COM_FLEXICONTACT_V_MAGIC_WORD" description="COM_FLEXICONTACT_V_MAGIC_WORD_DESC" />
+
+	<param name="@spacer" type="spacer" default="" label="" description="" />
+	<param name="subject" type="radio" default="yes" label="COM_FLEXICONTACT_V_SHOW_SUBJECT" description="COM_FLEXICONTACT_V_SHOW_SUBJECT_DESC">
+		<option value="yes">COM_FLEXICONTACT_V_YES</option>
+		<option value="no">COM_FLEXICONTACT_V_NO</option>
+	</param>
+	<param name="default_subject" type="text" size="40" default="" label="COM_FLEXICONTACT_V_DEFAULT_SUBJECT" description="COM_FLEXICONTACT_V_DEFAULT_SUBJECT_DESC" />
+
+	<param name="@spacer" type="spacer" default="" label="" description="" />
+	<param name="list_opt" type="list" default="disabled" label="COM_FLEXICONTACT_V_LIST" description="COM_FLEXICONTACT_V_LIST_DESC">
+		<option value="disabled">COM_FLEXICONTACT_V_DISABLED</option>
+		<option value="optional">COM_FLEXICONTACT_V_OPTIONAL</option>
+		<option value="mandatory">COM_FLEXICONTACT_V_MANDATORY</option>
+	</param>
+	<param name="list_prompt" type="text" size="40" default="" label="COM_FLEXICONTACT_V_PROMPT" description="COM_FLEXICONTACT_V_LIST_ITEMS_PROMPT_DESC" />
+	<param name="list_list" type="textarea" rows="6" cols="35" default="" label="COM_FLEXICONTACT_V_LIST_ITEMS" description="COM_FLEXICONTACT_V_LIST_ITEMS_DESC" />
+	
+	<param name="@spacer" type="spacer" default="" label="" description="" />
+	<param name="opt1" type="list" default="disabled" label="COM_FLEXICONTACT_V_LINE_1" description="COM_FLEXICONTACT_V_TEXT_FIELD_DESC">
+		<option value="disabled">COM_FLEXICONTACT_V_DISABLED</option>
+		<option value="optional">COM_FLEXICONTACT_V_OPTIONAL</option>
+		<option value="mandatory">COM_FLEXICONTACT_V_MANDATORY</option>
+	</param>
+	<param name="prompt1" type="text" size="40" default="" label="COM_FLEXICONTACT_V_PROMPT" description="The prompt for this field" />
+
+	<param name="@spacer" type="spacer" default="" label="" description="" />
+	<param name="opt2" type="list" default="disabled" label="COM_FLEXICONTACT_V_LINE_2" description="COM_FLEXICONTACT_V_TEXT_FIELD_DESC">
+		<option value="disabled">COM_FLEXICONTACT_V_DISABLED</option>
+		<option value="optional">COM_FLEXICONTACT_V_OPTIONAL</option>
+		<option value="mandatory">COM_FLEXICONTACT_V_MANDATORY</option>
+	</param>
+	<param name="prompt2" type="text" size="40" default="" label="COM_FLEXICONTACT_V_PROMPT" description="COM_FLEXICONTACT_V_PROMPT_DESC" />
+
+	<param name="@spacer" type="spacer" default="" label="" description="" />
+	<param name="opt3" type="list" default="disabled" label="COM_FLEXICONTACT_V_LINE_3" description="COM_FLEXICONTACT_V_TEXT_FIELD_DESC">
+		<option value="disabled">COM_FLEXICONTACT_V_DISABLED</option>
+		<option value="optional">COM_FLEXICONTACT_V_OPTIONAL</option>
+		<option value="mandatory">COM_FLEXICONTACT_V_MANDATORY</option>
+	</param>
+	<param name="prompt3" type="text" size="40" default="" label="COM_FLEXICONTACT_V_PROMPT" description="COM_FLEXICONTACT_V_PROMPT_DESC" />
+
+	<param name="@spacer" type="spacer" default="" label="" description="" />
+	<param name="opt4" type="list" default="disabled" label="COM_FLEXICONTACT_V_LINE_4" description="COM_FLEXICONTACT_V_TEXT_FIELD_DESC">
+		<option value="disabled">COM_FLEXICONTACT_V_DISABLED</option>
+		<option value="optional">COM_FLEXICONTACT_V_OPTIONAL</option>
+		<option value="mandatory">COM_FLEXICONTACT_V_MANDATORY</option>
+	</param>
+	<param name="prompt4" type="text" size="40" default="" label="COM_FLEXICONTACT_V_PROMPT" description="COM_FLEXICONTACT_V_PROMPT_DESC" />
+
+	<param name="@spacer" type="spacer" default="" label="" description="" />
+	<param name="opt5" type="list" default="disabled" label="COM_FLEXICONTACT_V_LINE_5" description="COM_FLEXICONTACT_V_TEXT_FIELD_DESC">
+		<option value="disabled">COM_FLEXICONTACT_V_DISABLED</option>
+		<option value="optional">COM_FLEXICONTACT_V_OPTIONAL</option>
+		<option value="mandatory">COM_FLEXICONTACT_V_MANDATORY</option>
+	</param>
+	<param name="prompt5" type="text" size="40" default="" label="COM_FLEXICONTACT_V_PROMPT" description="COM_FLEXICONTACT_V_PROMPT_DESC" />
+
+	<param name="@spacer" type="spacer" default="" label="" description="" />
+	<param name="area-opt" type="list" default="optional" label="COM_FLEXICONTACT_V_TEXT_AREA" description="COM_FLEXICONTACT_V_TEXT_AREA_DESC">
+		<option value="disabled">COM_FLEXICONTACT_V_DISABLED</option>
+		<option value="optional">COM_FLEXICONTACT_V_OPTIONAL</option>
+		<option value="mandatory">COM_FLEXICONTACT_V_MANDATORY</option>
+	</param>
+	<param name="area-prompt" type="text" size="40" default="" label="COM_FLEXICONTACT_V_PROMPT" description="COM_FLEXICONTACT_V_TEXT_AREA_PROMPT_DESC" />
+	<param name="area-width" type="text" size="5" default="40" label="COM_FLEXICONTACT_V_WIDTH" description="COM_FLEXICONTACT_V_TEXT_AREA_WIDTH_DESC" />
+	<param name="area-height" type="text" size="5" default="15" label="COM_FLEXICONTACT_V_HEIGHT" description="COM_FLEXICONTACT_V_TEXT_AREA_HEIGHT_DESC" />
+	<param name="@spacer" type="spacer" default="" label="" description="" />
+	<param name="bottom_text" type="textarea" rows="8" cols="60" default="" label="COM_FLEXICONTACT_V_BOTTOM_TEXT" description="COM_FLEXICONTACT_V_BOTTOM_TEXT_DESC" />
+</params>
+
+</state>
+
+</metadata>

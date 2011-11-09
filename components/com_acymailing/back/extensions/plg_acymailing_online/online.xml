@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/plugin-install.dtd">
+<install type="plugin" version="1.5" method="upgrade" group="acymailing">
+	<name>AcyMailing Tag : Website links</name>
+	<creationDate>September 2009</creationDate>
+	<version>1.8.4</version>
+	<author>Acyba</author>
+	<authorEmail>dev@acyba.com</authorEmail>
+	<authorUrl>http://www.acyba.com</authorUrl>
+	<copyright>Copyright (C) 2009-2011 ACYBA SARL - All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>This plugin enables you to add links in your Newsletter such as "read in your browser" or "forward to a friend"</description>
+	<files>
+		<filename plugin="online">online.php</filename>
+	</files>
+	<params addpath="/components/com_acymailing/params">
+		<param name="help" type="help" label="Help" description="Click on the help button to get some help" default="plugin-online"/>
+		<param name="viewtemplate" type="radio" default="standard" label="Display the online version" description="Select if you want to display the online version (when the user clicks on the view it online link) without any Joomla module (no template) or inside your default Joomla Template">
+			<option value="standard">Standard template</option>
+			<option value="notemplate">No template</option>
+		</param>
+		<param name="forwardtemplate" type="radio" default="standard" label="Display the forward version" description="Select if you want to display the forward page (when the user clicks on the forward link) without any Joomla module (no template) or inside your default Joomla Template">
+			<option value="standard">Standard template</option>
+			<option value="notemplate">No template</option>
+		</param>
+		<param name="addkey" type="radio" default="yes" label="Add Newsletter key" description="Add the Newsletter key in the link so the online version will be always accessible from the link inserted in the Newsletter">
+			<option value="yes">Yes</option>
+			<option value="no">No</option>
+		</param>
+		<param name="adduserkey" type="radio" default="yes" label="Add User key" description="Add the user key in the link so the online version will contain the personal information as well">
+			<option value="yes">Yes</option>
+			<option value="no">No</option>
+		</param>
+	</params>
+	<config>
+		<fields name="params" addfieldpath="/components/com_acymailing/params">
+			<fieldset name="basic">
+				<field name="help" type="help" label="Help" description="Click on the help button to get some help" default="plugin-online"/>
+				<field name="viewtemplate" type="radio" default="standard" label="Display the online version" description="Select if you want to display the online version (when the user clicks on the view it online link) without any Joomla module (no template) or inside your default Joomla Template">
+					<option value="standard">Standard template</option>
+					<option value="notemplate">No template</option>
+				</field>
+				<field name="forwardtemplate" type="radio" default="standard" label="Display the forward version" description="Select if you want to display the forward page (when the user clicks on the forward link) without any Joomla module (no template) or inside your default Joomla Template">
+					<option value="standard">Standard template</option>
+					<option value="notemplate">No template</option>
+				</field>
+				<field name="addkey" type="radio" default="yes" label="Add Newsletter key" description="Add the Newsletter key in the link so the online version will be always accessible from the link inserted in the Newsletter">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+				<field name="adduserkey" type="radio" default="yes" label="Add User key" description="Add the user key in the link so the online version will contain the personal information as well">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</install>

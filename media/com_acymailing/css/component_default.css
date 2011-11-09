@@ -1,0 +1,406 @@
+span.onload
+{
+	background-image:url(../images/spinner.gif);
+	background-repeat:no-repeat;
+	background-position:left;
+	padding:2px 20px;
+}
+
+span.loading{
+	padding:2px 20px;
+}
+
+div.onload{
+	background-image:url(../images/spinner.gif);
+	background-repeat:no-repeat;
+	width:16px;
+	height:16px;
+	float : right;
+	margin-left : 3px;
+}
+
+.searchtext
+{
+	background-color: rgb(255, 255, 102);
+	color : black;
+	font-weight:bold;
+}
+
+th.titletoggle{
+	width:65px;
+	white-space: nowrap;
+}
+
+th.titledate{
+	width:150px;
+	white-space: nowrap;
+}
+
+th.titlesender{
+	width:150px;
+	white-space: nowrap;
+}
+
+th.titlelink, th.titleorder{
+	width:100px;
+}
+
+th.titlebox, th.titleid, th.titlenum{
+	width:30px;
+	white-space: nowrap;
+}
+
+th.titlecolor{
+	width:12px;
+}
+
+td.key{
+	white-space: nowrap;
+}
+
+#acy_content a.acyupgradelink{
+	color:#A44097;
+	font-style:italic;
+	font-size:10px;
+	}
+
+div.roundsubscrib{
+	width:12px;
+	height:12px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	float : right;
+	margin-left : 3px;
+	margin-top : 1px;
+	margin-bottom : 1px;
+}
+
+div.rounddisp{
+	border : 1px solid;
+	border-color : grey;
+}
+
+div.roundsub{
+	border : 2px solid;
+	border-color : green;
+}
+div.roundunsub{
+	border : 2px solid;
+	border-color : red;
+}
+div.roundconf{
+	border : 2px solid;
+	border-color : orange;
+}
+
+div.acymailing_footer{
+	padding-top : 20px;
+	font-size : 10px;
+}
+
+/*********************************************************/
+/* Style used when you display the lists on the frontend */
+/*********************************************************/
+div.acymailing_list{
+	border : 1px solid #cccccc;
+	margin : 10px;
+	padding : 10px;
+}
+
+div.acymailing_list:hover{
+	background-color : #FFFFDD;
+}
+
+.list_description{
+	padding : 10px 10px;
+}
+
+.list_name{
+	font-size : 14pt;
+}
+
+.acymailing_forward{
+	text-align:center;
+	width:100%;
+	margin-bottom:30px;
+}
+
+div#iframedoc, div#iframetemplate, div#iframetag{
+	height:300px;
+	display:none;
+	border:2px solid #cccccc;
+}
+#iframedoc iframe, #iframetemplate iframe, #iframetag iframe{
+	border:0px;
+	}
+
+div.newsletter_body{
+	color : black;
+}
+div.newsletter_body th,div.newsletter_body td, div.newsletter_body tr{
+	padding : 0;
+	border:0px;
+}
+
+.hideonline{
+	display:none;
+}
+
+img.captchaimagecomponent{
+	border:1px solid #dddddd;
+}
+
+/*********************************************************/
+/* Some Icons which are not defined by the template */
+/*********************************************************/
+
+.icon-16-refuse {background-image:url(../images/icons/icon-16-refuse.png); background-repeat: no-repeat; width:16px; height:16px; float:right;margin-left:3px;}
+.icon-32-stats {background-image:url(../images/icons/icon-32-stats.png);}
+.icon-32-schedule {background-image:url(../images/icons/icon-32-schedule.png);}
+.icon-32-import {background-image:url(../images/icons/icon-32-import.png);}
+.icon-32-acyexport {background-image:url(../images/icons/icon-32-acyexport.png);}
+.icon-32-acylist {background-image:url(../images/icons/icon-32-acylist.png);}
+.icon-32-unschedule {background-image:url(../images/icons/icon-32-unschedule.png);}
+.icon-32-process {background-image:url(../images/icons/icon-32-process.png);}
+.icon-32-acytemplate {background-image:url(../images/icons/icon-32-acytemplate.png);}
+.icon-32-tag {background-image:url(../images/icons/icon-32-tag.png);}
+.icon-32-replacetag {background-image:url(../images/icons/icon-32-replacetag.png);}
+.icon-32-acyaction {background-image:url(../images/icons/icon-32-acyaction.png);}
+.icon-32-acymailing {background-image:url(../images/icons/icon-32-acymailing.png);}
+.icon-32-fields {background-image:url(../images/icons/icon-32-fields.png);}
+.icon-32-filter {background-image:url(../images/icons/icon-32-filter.png);}
+.icon-32-share {background-image:url(../images/icons/icon-32-share.png);}
+.icon-48-import {background-image:url(../images/icons/icon-48-import.png);}
+.icon-48-acyexport {background-image:url(../images/icons/icon-48-acyexport.png);}
+.icon-48-process {background-image:url(../images/icons/icon-48-process.png);}
+.icon-48-stats {background-image:url(../images/icons/icon-48-stats.png);}
+.icon-48-acymailing {background-image:url(../images/icons/icon-48-acymailing.png);}
+.icon-48-acytemplate {background-image:url(../images/icons/icon-48-acytemplate.png);}
+.icon-48-newsletter {background-image:url(../images/icons/icon-48-newsletter.png);}
+.icon-48-autonewsletter {background-image:url(../images/icons/icon-48-autonewsletter.png);}
+.icon-48-campaign {background-image:url(../images/icons/icon-48-campaign.png);}
+.icon-48-fields {background-image:url(../images/icons/icon-48-fields.png);}
+.icon-48-filter {background-image:url(../images/icons/icon-48-filter.png);}
+.icon-48-share {background-image:url(../images/icons/icon-48-share.png);}
+.icon-48-acylist {background-image:url(../images/icons/icon-48-acylist.png);}
+.icon-48-acyaction {background-image:url(../images/icons/icon-48-acyaction.png);}
+
+/***************************************************************************/
+/* Some Messages to display on a popup because the CSS is not fully loaded */
+/***************************************************************************/
+
+a .icon16{
+	border: 1px solid transparent;
+}
+
+a:hover .icon16{
+	border: 1px solid #669933;
+}
+
+.acyschedule{
+	display:inline-block;
+	height:16px;
+	width:16px;
+	background-image:url(../images/schedule.png)
+}
+
+div.acymailing_messages{
+	border-bottom-style:solid;
+	border-bottom-width:2px;
+	border-top-style:solid;
+	border-top-width:2px;
+	font-weight:bold;
+	margin:5px 10px;
+	padding:0;
+}
+
+.acymailing_messages li{
+	list-style-type : none;
+	background:none;
+	padding-left:0px;
+}
+
+.acymailing_messages ul{
+	padding:3px 0 3px 25px;
+	margin:10px;
+}
+
+div.acymailing_warning{
+	background-color:#EFE7B8;
+	border-bottom-color:#F0DC7E;
+	border-top-color:#F0DC7E;
+	color:#CC0000;
+}
+
+div.acymailing_success{
+	background-color:#CCFFBB;
+	border-bottom-color:#00AA00;
+	border-top-color:#00AA00;
+	color:#00AA00;
+}
+
+div.acymailing_info{
+	background-color:#C3D2E5;
+	border-bottom-color:#84A7DB;
+	border-top-color:#84A7DB;
+	color:#0055BB;
+}
+
+div.acymailing_error{
+	background-color:#E6C0C0;
+	border-bottom-color:#DE7A7B;
+	border-top-color:#DE7A7B;
+	color:#CC0000;
+}
+
+div.acychart, table.acychart{
+	border:1px solid #dddddd;
+	padding:2px;
+}
+
+#acy_content input,#acy_content textarea,#acy_content select,
+#acy_content fieldset input,#acy_content fieldset textarea,#acy_content fieldset select,
+#acy_content fieldset img,#acy_content fieldset button{
+	float:none;
+}
+#acy_content input[type=radio]{
+	margin-left:10px;
+}
+#acy_content label{
+	float:none;
+	display:inline;
+}
+#acy_content fieldset{
+	border:1px solid #CCCCCC;
+	background-color:#FFFFFF;
+}
+#acy_content table.admintable td.key ,#acy_content table.admintable td.paramlist_key {
+	background-color:#F6F6F6;
+	border-bottom:1px solid #E9E9E9;
+	border-right:1px solid #E9E9E9;
+	color:#666666;
+	font-weight:bold;
+	text-align:right;
+	width:140px;
+}
+
+#acy_content div.header{
+	background-repeat:no-repeat;
+	color:#0B55C4;
+	font-size:22px;
+	font-weight:bold;
+	line-height:48px;
+	margin-left:10px;
+	padding-left:55px;
+}
+
+#acy_content dd{
+	width:auto;
+}
+
+#acy_content fieldset legend{
+    position:static;
+    float:none;
+    top : 0px !important;
+}
+
+#acy_content div.current{
+	background-color:#F9F9F9;
+}
+
+#acyarchivelisting td, #acyarchivelisting tr, #acymodifyform td, #acymodifyform tr{
+	border:0px;
+}
+
+#acyuserinfo td{
+	padding: 4px;
+}
+
+#acyarchivelisting img{
+	border:none;
+}
+
+
+/********************/
+/*   TAG SYSTEM     */
+/********************/
+div.acytagpopup .familymenu a
+{
+    display:block;
+    float:left;
+    border-left: 1px solid #dbd9d9;
+    border-bottom:3px solid #A6C91C;
+    background:url(../images/grey_strip.png) repeat-x center;
+    font-size:12px;
+    color:#dbd9d9;
+    text-decoration:none;
+    padding: 8px 10px 6px;
+    white-space:nowrap;
+
+}
+
+
+div.acytagpopup .familymenu a:hover,div.acytagpopup .familymenu a.selected
+{
+
+    color:#ffffff;
+    background:url(../images/arrow.png) no-repeat center bottom;
+    border-bottom-style: none;
+    padding-bottom:9px;
+    background-color:#A6C91C;
+}
+
+div.acytagpopup #inserttagdiv{
+    float:right;
+}
+div.acytagpopup #plugarea{
+    float:left;
+    clear:both;
+    padding :10px;
+    width:700px;
+}
+div.acytagpopup table.adminlist tr.selectedrow td{
+    background-color:#FDE2BA;
+}
+
+
+
+/*************************/
+/*   ACL Table           */
+/*************************/
+table.acltable thead{
+	background-color:#5471B5;
+	color:white;
+}
+
+table.acltable{
+	border-collapse: collapse;
+	background-color:white;
+}
+table.acltable td
+{
+	padding:4px;
+    border: #cccccc 1px solid;
+}
+
+table.acltable th{
+	padding: 5px 15px;
+	border: #cccccc 1px solid;
+	}
+
+table.acltable td.checkfield{
+	text-align:center;
+}
+
+table.acltable tr.aclline:hover{
+	background-color:#CDE6E3;
+}
+
+/** unsub page **/
+#unsubpage .unsubsurvey, #unsubpage .unsubintro {
+	padding:10px;
+	}
+
+#unsubpage .unsuboptions{
+	padding-left:20px;
+}

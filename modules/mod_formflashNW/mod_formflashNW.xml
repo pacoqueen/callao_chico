@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+	<name>Formuario Flash NW</name>
+	<author>NW</author>
+	<creationDate>April  2011</creationDate>
+	<copyright>Copyright (C) 2011 NW. All rights reserved.</copyright>
+	<license>http://www.novaweb.es</license>
+	<authorEmail>mvalverde@novaweb.es</authorEmail>
+	<authorUrl>http://www.novaweb.es</authorUrl>
+	<version>0.1</version>
+	<description>Flash Form NW.</description>
+	<files>
+		<filename module="mod_formflashNW">mod_easyfileuploader.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>readme.txt</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			<field name="efu_flash_enabled" type="list" default="0" label="Hablitar Flash" description="Habilitar Flash.">
+					<option value="0">Deshabilitado</option>
+					<option value="1">Habilitar</option>
+					
+			</field>
+			<field name="efu_flashfilename" type="text" default="" label="Flash file Name" description="Nombre del archivo flash." />
+			
+			
+			</fieldset>
+		</fields>
+	</config>
+</extension>

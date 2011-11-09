@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="1.6">
+<name>Español (spanish formal Internacional) Pack</name>
+<packagename>es-ES</packagename>
+<version>1.6.1</version>
+<url>joomlaspanish.org</url>
+<packager>Joomla! Spanish</packager>
+<packagerurl>http://joomlacode.org/gf/project/spanish/</packagerurl>
+<description>Idioma completo creado por Joomla! Spanish para Joomla 1.6.1, Zona frontal y administrativa.</description>
+<files>
+        <file type="language" client="site" id="es-ES">site_es-ES.zip</file>
+        <file type="language" client="admin" id="es-ES">admin_es-ES.zip</file>
+</files>
+</extension>

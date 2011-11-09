@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/plugin-install.dtd">
+<install type="plugin" version="1.5" method="upgrade" group="acymailing">
+	<name>AcyMailing Tag : Manage the Subscription</name>
+	<creationDate>September 2009</creationDate>
+	<version>1.8.4</version>
+	<author>Acyba</author>
+	<authorEmail>dev@acyba.com</authorEmail>
+	<authorUrl>http://www.acyba.com</authorUrl>
+	<copyright>Copyright (C) 2009-2011 ACYBA SARL - All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>This plugin enables you to add link to manage the subscription of the user</description>
+	<files>
+		<filename plugin="tagsubscription">tagsubscription.php</filename>
+	</files>
+	<params addpath="/components/com_acymailing/params">
+		<param name="help" type="help" label="Help" description="Click on the help button to get some help" default="plugin-tagsubscription"/>
+		<param name="unsubscribetemplate" type="radio" default="0" label="Display the unsubscribe page" description="Select if you want to display the unsubscribe page (when the user clicks on the unsubscribe link) without any Joomla module (no template) or inside your default Joomla Template">
+			<option value="0">Standard template</option>
+			<option value="1">No template</option>
+		</param>
+		<param name="modifytemplate" type="radio" default="0" label="Display the modify your subscription" description="Select if you want to display the modify your subscription page (when the user clicks on the modify you subscription link) without any Joomla module (no template) or inside your default Joomla Template">
+			<option value="0">Standard template</option>
+			<option value="1">No template</option>
+		</param>
+		<param name="confirmtemplate" type="radio" default="0" label="Display the confirmation page" description="Select if you want to display the confirmation page (when the user clicks on the confirmation link) without any Joomla module (no template) or inside your default Joomla Template">
+			<option value="0">Standard template</option>
+			<option value="1">No template</option>
+		</param>
+	</params>
+	<config>
+		<fields name="params" addfieldpath="/components/com_acymailing/params">
+			<fieldset name="basic">
+				<field name="help" type="help" label="Help" description="Click on the help button to get some help" default="plugin-tagsubscription"/>
+				<field name="unsubscribetemplate" type="radio" default="0" label="Display the unsubscribe page" description="Select if you want to display the unsubscribe page (when the user clicks on the unsubscribe link) without any Joomla module (no template) or inside your default Joomla Template">
+					<option value="0">Standard template</option>
+					<option value="1">No template</option>
+				</field>
+				<field name="modifytemplate" type="radio" default="0" label="Display the modify your subscription" description="Select if you want to display the modify your subscription page (when the user clicks on the modify you subscription link) without any Joomla module (no template) or inside your default Joomla Template">
+					<option value="0">Standard template</option>
+					<option value="1">No template</option>
+				</field>
+				<field name="confirmtemplate" type="radio" default="0" label="Display the confirmation page" description="Select if you want to display the confirmation page (when the user clicks on the confirmation link) without any Joomla module (no template) or inside your default Joomla Template">
+					<option value="0">Standard template</option>
+					<option value="1">No template</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+
+</install>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install version="1.5.0" type="module" method="upgrade">
+	<name>Art Universal Lightbox</name>
+	<author>Artetics</author>
+	<creationDate>August 2010</creationDate>
+	<copyright>Copyright (C) 2010 artetics.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<authorEmail>info@artetics.com</authorEmail>
+	<authorUrl>www.artetics.com</authorUrl>
+	<version>1.4.0</version>
+	<description><![CDATA[Art Universal Lightbox: module to show image gallery with lightbox effect: sexy lightbox, colobox or pretty photo.<br /><br /><br />&copy;&nbsp;<a href="http://www.artetics.com">Artetics.com</a> - Start Point For Your Website.]]></description>
+	<files>
+		<filename module="mod_artuniversallightbox">mod_artuniversallightbox.php</filename>
+    <folder>artuniversallightbox</folder>
+	</files>
+	<params>
+    <param name="path" type="text" default="" label="Path to images folder" description="Path to images folder. Relative to Joomla! directory. If you would like to show images from JOOMLA_DIR/images/my_images then you should indicate path as images/my_images "/>
+    <param name="thumbnailPath" type="text" default="" label="Path to thumbnail folder" description="Path to thumbnail folder - if you would like to take thumbnails from specific folder. Relative to Joomla! directory. If you would like to show images from JOOMLA_DIR/images/my_images then you should indicate path as images/my_images "/>
+    <param name="@spacer" type="spacer" default="&lt;br /&gt;&lt;b&gt;Common options &lt;/b&gt;&lt;hr /&gt;" />
+    <param name="lightbox" type="list" default="0" label="Lightbox" description="Lightbox">
+      <option value="1">Sexy Lightbox</option>
+      <option value="2">Colorbox</option>
+      <option value="3">Pretty Photo</option>
+    </param>
+    <param name="loadJQuery" type="list" default="1" label="Load jQuery library" description="Load jQuery javascript library? Choose no if it is always included in your pages">
+      <option value="1">yes</option>
+      <option value="0">no</option>
+    </param>
+    <param name="@spacer" type="spacer" default="&lt;br /&gt;&lt;b&gt;Thumbnail options &lt;/b&gt;&lt;hr /&gt;" />
+    <param name="previewWidth" type="text" default="" label="Thumbnail width" description="Thumbnail width"/>
+  	<param name="previewHeight" type="text" default="" label="Thumbnail height" description="Thumbnail height"/>
+    <param name="autoGenerateThumbs" type="list" default="0" label="Generate thumbnails" description="Automatically generate thumbnails saving aspect ratio or just resize images">
+      <option value="1">yes</option>
+      <option value="0">no</option>
+    </param>
+    <param name="convertImageOption" type="list" default="0" label="Convert image" description="Generate thumbnails using this convert option">
+      <option value="0">none</option>
+      <option value="resize">resize</option>
+      <option value="crop">crop</option>
+      <option value="crop_resize">crop and resize</option>
+    </param>
+    <param name="arotate" type="text" default="" label="Angle to rotate thumbnails" description="Angle to rotate thumbnails"/>
+    <param name="numberOfImages" type="text" default="" label="Number of images" description="Number of images to show. Leave empty for all images"/>
+    <param name="caption" type="list" default="0" label="Show caption" description="Show caption under thumbnail">
+      <option value="1">yes</option>
+      <option value="0">no</option>
+    </param>
+    <param name="singleOption" type="list" default="0" label="Show single image or text" description="Show single image or text">
+      <option value="full">Show full gallery</option>
+      <option value="singleImage">Single thumbnail, all images in a lightbox</option>
+      <option value="singleImage2">Single image only</option>
+      <option value="singleText">Single text</option>
+    </param>
+    <param name="singleContent" type="text" default="" label="Single image or text" description="Single image or text. Indicate random to show random single image"/>
+    <param name="altTag" type="text" default="" label="Alt tag for images" description="Alt tag for images. If empty then alt tags will be automatically generated"/>
+    <param name="sort" type="list" default="asc" label="Sort images" description="Sort images">
+      <option value="asc">ascending</option>
+      <option value="desc">descending</option>
+    </param>
+  </params>
+  <config>
+	<fields name="params">
+		<fieldset name="basic">
+			<field name="path" type="text" default="" label="Path to images folder" description="Path to images folder. Relative to Joomla! directory. If you would like to show images from JOOMLA_DIR/images/my_images then you should indicate path as images/my_images "/>
+			<field name="thumbnailPath" type="text" default="" label="Path to thumbnail folder" description="Path to thumbnail folder - if you would like to take thumbnails from specific folder. Relative to Joomla! directory. If you would like to show images from JOOMLA_DIR/images/my_images then you should indicate path as images/my_images "/>
+			<field name="@spacer" type="spacer" default="&lt;br /&gt;&lt;b&gt;Common options &lt;/b&gt;&lt;hr /&gt;" />
+			<field name="lightbox" type="list" default="0" label="Lightbox" description="Lightbox">
+			  <option value="1">Sexy Lightbox</option>
+			  <option value="2">Colorbox</option>
+			  <option value="3">Pretty Photo</option>
+			</field>
+			<field name="loadJQuery" type="list" default="1" label="Load jQuery library" description="Load jQuery javascript library? Choose no if it is always included in your pages">
+			  <option value="1">yes</option>
+			  <option value="0">no</option>
+			</field>
+			<field name="@spacer" type="spacer" default="&lt;br /&gt;&lt;b&gt;Thumbnail options &lt;/b&gt;&lt;hr /&gt;" />
+			<field name="previewWidth" type="text" default="" label="Thumbnail width" description="Thumbnail width"/>
+			<field name="previewHeight" type="text" default="" label="Thumbnail height" description="Thumbnail height"/>
+			<field name="autoGenerateThumbs" type="list" default="0" label="Generate thumbnails" description="Automatically generate thumbnails saving aspect ratio or just resize images">
+			  <option value="1">yes</option>
+			  <option value="0">no</option>
+			</field>
+			<field name="convertImageOption" type="list" default="0" label="Convert image" description="Generate thumbnails using this convert option">
+			  <option value="0">none</option>
+			  <option value="resize">resize</option>
+			  <option value="crop">crop</option>
+			  <option value="crop_resize">crop and resize</option>
+			</field>
+			<field name="arotate" type="text" default="" label="Angle to rotate thumbnails" description="Angle to rotate thumbnails"/>
+			<field name="numberOfImages" type="text" default="" label="Number of images" description="Number of images to show. Leave empty for all images"/>
+			<field name="caption" type="list" default="0" label="Show caption" description="Show caption under thumbnail">
+			  <option value="1">yes</option>
+			  <option value="0">no</option>
+			</field>
+			<field name="singleOption" type="list" default="0" label="Show single image or text" description="Show single image or text">
+			  <option value="full">Show full gallery</option>
+			  <option value="singleImage">Single thumbnail, all images in a lightbox</option>
+			  <option value="singleImage2">Single image only</option>
+			  <option value="singleText">Single text</option>
+			</field>
+			<field name="singleContent" type="text" default="" label="Single image or text" description="Single image or text. Indicate random to show random single image"/>
+			<field name="altTag" type="text" default="" label="Alt tag for images" description="Alt tag for images. If empty then alt tags will be automatically generated"/>
+			<field name="sort" type="list" default="asc" label="Sort images" description="Sort images">
+			  <option value="asc">ascending</option>
+			  <option value="desc">descending</option>
+			</field>
+		</fieldset>
+	</fields>
+  </config>
+</install>

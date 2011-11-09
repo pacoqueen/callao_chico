@@ -1,0 +1,71 @@
+.adminform .content{
+	
+}
+
+.adminform .pane-sliders .panel h3{
+	color:#025A8D!important;
+
+}
+
+.adminform  .paramlist_key{
+	background:#FFF	!important;
+	border:none!important;
+}
+.lof-group{
+	background:#F3F3F3 url(j_arrow.png) no-repeat scroll 5px 50% !important;
+	color:#025A8D!important;
+	border-right:#CCC solid 5px;
+	border-left:#CCC solid 5px;
+	padding:5px 20px!important;
+	clear:both;
+}
+.icon-content .expand
+{
+	background:#F3F3F3 url(j_arrow_down.png) no-repeat scroll 5px 50% !important;
+	color:#025A8D !important;
+}
+.icon-image .paramlist_key{
+	background:url(icon-image.png) no-repeat center center !important	
+	;
+	background-color:#FFF!important;
+}
+.icon-k2 .paramlist_key{
+	background:url(k2_logo.gif) no-repeat center center !important	
+	;
+	background-color:#FFF!important;
+}
+.icon-banner .paramlist_key{
+	background:url(shop-ad.jpg) no-repeat center center !important	
+	;
+	background-color:#FFF!important;
+}
+.icon-content .paramlist_key{
+	background:url(joomla.png) no-repeat center center !important	;
+	background-color:#FFF!important;
+}
+
+.icon-virtuemart .paramlist_key{
+	background:url(virtuemart.png) no-repeat center center  !important ;
+	background-color:#FFF!important;
+	
+}
+.paramlist_value{
+	background:#FFF	!important;
+}
+.lof-group-tr td{
+	color:#4D4D4D!important;	
+}
+.lof-even  h3{ background:#f9f9f9!important;}
+
+.lof-odd:hover,.lof-even:hover{ border:#c8c8c8 solid 1px!important}
+.lof-odd:hover h3,.lof-even:hover h3{ background:#dcd9d9!important; color:#fff!important}
+.lof-header {
+	background:#F3F3F3  !important;
+	color:#025A8D !important;
+	cursor:pointer;
+	font-weight:bold;
+	border-left:5px solid #CCCCCC;
+	border-right:5px solid #CCCCCC;
+	clear:both;
+	padding:5px 20px !important;
+}

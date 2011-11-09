@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
+<install type="component" version="1.5" method="upgrade">
+	<name>AcyMailing</name>
+	<creationDate>April 2011</creationDate>
+	<version>1.8.4</version>
+	<author>Acyba</author>
+	<authorEmail>dev@acyba.com</authorEmail>
+	<authorUrl>http://www.acyba.com</authorUrl>
+	<copyright>Copyright (C) 2009-2011 ACYBA SARL - All rights reserved.</copyright>
+	<description>Manage your Mailing lists, Newsletters, e-mail marketing campaigns</description>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<languages folder="front_language">
+		<language tag="de-DE">de-DE.com_acymailing.ini</language>
+		<language tag="en-GB">en-GB.com_acymailing.ini</language>
+		<language tag="es-ES">es-ES.com_acymailing.ini</language>
+		<language tag="fr-FR">fr-FR.com_acymailing.ini</language>
+		<language tag="hu-HU">hu-HU.com_acymailing.ini</language>
+		<language tag="it-IT">it-IT.com_acymailing.ini</language>
+		<language tag="nl-NL">nl-NL.com_acymailing.ini</language>
+		<language tag="pl-PL">pl-PL.com_acymailing.ini</language>
+		<language tag="pt-BR">pt-BR.com_acymailing.ini</language>
+		<language tag="pt-PT">pt-PT.com_acymailing.ini</language>
+		<language tag="ru-RU">ru-RU.com_acymailing.ini</language>
+		<language tag="sv-SE">sv-SE.com_acymailing.ini</language>
+	</languages>
+	<install>
+		<sql>
+			<file driver="mysql">tables.sql</file>
+			<file driver="mysql" charset="utf8">tables.sql</file>
+			<file driver="mysqli">tables.sql</file>
+			<file driver="mysqli" charset="utf8">tables.sql</file>
+		</sql>
+	</install>
+	<installfile>install.acymailing.php</installfile>
+	<uninstallfile>uninstall.acymailing.php</uninstallfile>
+	<files folder="front">
+		<folder>controllers</folder>
+		<folder>inc</folder>
+		<folder>params</folder>
+		<folder>views</folder>
+		<filename>acymailing.php</filename>
+		<filename>index.html</filename>
+		<filename>router.php</filename>
+		<filename>sef_ext.php</filename>
+	</files>
+	<media folder="media" destination="com_acymailing">
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>templates</folder>
+		<filename>index.html</filename>
+	</media>
+	<administration>
+		<files folder="back">
+			<folder>buttons</folder>
+			<folder>classes</folder>
+			<folder>controllers</folder>
+			<folder>extensions</folder>
+			<folder>helpers</folder>
+			<folder>types</folder>
+			<folder>views</folder>
+			<filename>admin.acymailing.php</filename>
+			<filename>index.html</filename>
+			<filename>install.acymailing.php</filename>
+			<filename>tables.sql</filename>
+			<filename>uninstall.acymailing.php</filename>
+		</files>
+		<menu img="../media/com_acymailing/images/icons/icon-16-acymailing.png" link="option=com_acymailing">AcyMailing</menu>
+		<submenu>
+			<menu link="option=com_acymailing&amp;ctrl=subscriber" img="../includes/js/user.png">Users</menu>
+			<menu link="option=com_acymailing&amp;ctrl=list" img="../media/com_acymailing/images/icons/icon-16-acylist.png">Lists</menu>
+			<menu link="option=com_acymailing&amp;ctrl=newsletter" img="../media/com_acymailing/images/icons/icon-16-newsletter.png">Newsletters</menu>
+			<menu link="option=com_acymailing&amp;ctrl=template" img="../media/com_acymailing/images/icons/icon-16-acytemplate.png">Templates</menu>
+			<menu link="option=com_acymailing&amp;ctrl=queue" img="../media/com_acymailing/images/icons/icon-16-process.png">Queue</menu>
+			<menu link="option=com_acymailing&amp;ctrl=stats" img="../media/com_acymailing/images/icons/icon-16-stats.png">Statistics</menu>
+			<menu link="option=com_acymailing&amp;ctrl=config" img="../includes/js/ThemeOffice/config.png">Configuration</menu>
+			<menu link="option=com_acymailing&amp;ctrl=update" img="../includes/js/ThemeOffice/install.png">Update_About</menu>
+		</submenu>
+	</administration>
+</install>

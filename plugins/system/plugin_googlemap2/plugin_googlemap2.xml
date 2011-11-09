@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6.0" type="plugin" group="system" method="upgrade">
+	<name>Google Maps</name>
+	<author>Mike Reumer</author>
+	<creationDate>Januari 2010</creationDate>
+	<copyright>(C) 2011 Reumer</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>tech@reumer.net</authorEmail>
+	<authorUrl>tech.reumer.net</authorUrl>
+	<version>2.13b</version>
+	<description>PLUGIN_GOOGLE_MAPS_INSTALLATION</description>
+	<files>
+		<filename plugin="plugin_googlemap2">plugin_googlemap2.php</filename>
+		<filename>plugin_googlemap2_helper.php</filename>
+		<filename>plugin_googlemap2_proxy.php</filename>
+		<filename>gpl.txt</filename>
+		<filename>index.html</filename>
+	</files>
+	<media folder="media" destination="plugin_googlemap2">
+		<folder>site</folder>		
+    </media>
+	<languages>
+	   <language tag="en-GB">language/en-GB.plg_system_plugin_googlemap2.ini</language>
+	   <language tag="en-GB">language/en-GB.plg_system_plugin_googlemap2.sys.ini</language>
+	   <language tag="it-IT">language/it-IT.plg_system_plugin_googlemap2.ini</language>
+	   <language tag="it-IT">language/it-IT.plg_system_plugin_googlemap2.sys.ini</language>
+	   <language tag="es-ES">language/es-ES.plg_system_plugin_googlemap2.ini</language>
+	   <language tag="es-ES">language/es-ES.plg_system_plugin_googlemap2.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="GOOGLEMAP_BASIC">
+				<field name="publ" type="radio" size="1" default="1" export='0' label="Published" description="GOOGLEMAP_TT_CONFIG_PUBLISHED">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="debug" type="radio" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_DEBUG" description="GOOGLEMAPS_TT_MAPS_DEBUG">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="plugincode" type="text" size= "40" default="mosmap" export='0' label="GOOGLEMAPS_PLUGINCODE" description="GOOGLEMAPS_TT_PLUGINCODE" />
+				<field name="brackets" type="radio" size= "1" default="{" export='0' label="GOOGLEMAPS_BRACKETS" description="GOOGLEMAPS_TT_BRACKETS">
+					<option value="{">{}</option>
+					<option value="[">[]</option>
+					<option value="both">GOOGLEMAPS_BRACKETS_BOTH</option>
+				</field>
+				<field name="Google_API_version" type="text" size= "5" default="2.x" export='0' label="GOOGLEMAPS_GOOGLEAPIVERSION" description="GOOGLEMAPS_TT_GOOGLEAPIVERSION" />
+				
+				<field name="loadmootools" type="radio" size= "1" default="1" export='0' label="GOOGLEMAPS_LOADWITHMOOTOOLS" description="GOOGLEMAPS_TT_LOADWITHMOOTOOLS">
+					<option value="1">GOOGLEMAPS_LOADWITHMOOTOOLSMOOTOOLS</option>
+					<option value="0">GOOGLEMAPS_LOADWITHMOOTOOLSTIMEINTERVAL</option>
+				</field>
+				<field name="timeinterval" type="text" size= "4" default="500" export='0' label="GOOGLEMAPS_TIMEINTERVAL" description="GOOGLEMAPS_TT_TIMEINTERVAL" />
+				<field name="Google_API_key" type="text" size="60" maxsize="255" default="" export='0' label="GOOGLEMAPS_API_KEY" description="GOOGLEMAPS_TT_API_KEY" />
+				<field name="Google_Multi_API_key" type="textarea" rows="5" cols="40" default="" export='0' label="GOOGLEMAPS_MULTI_API_KEY" description="GOOGLEMAPS_TT_MULTI_API_KEY" />
+				<field name="urlsetting" type="radio" size= "1" default="http_host" export='0' label="GOOGLEMAPS_URLWEBSITE" description="GOOGLEMAPS_TT_URLWEBSITE">
+					<option value="Joomla">GOOGLEMAPS_URLWEBSITE_JOOMLA</option>
+					<option value="http_host">HTTP_HOST</option>
+				</field>
+				<field name="googlewebsite" type="list" size= "1" default="maps.google.com" export='0' label="GOOGLEMAPS_GOOGLEWEBSITE" description="GOOGLEMAPS_TT_GOOGLEWEBSITE">
+					<option value="maps.google.com">USA (default maps.google.com)</option>
+					<option value="maps.google.at">Austria (maps.google.at)</option>
+					<option value="maps.google.com.au">Australia (maps.google.com.au)</option>
+					<option value="maps.google.com.ba">Bosnia and Herzegovina (maps.google.com.ba)</option>
+					<option value="maps.google.be">Belgium (maps.google.be)</option>
+					<option value="maps.google.com.br">Brazil (maps.google.com.br)</option>
+					<option value="maps.google.ca">Canada (maps.google.ca)</option>
+					<option value="maps.google.ch">Switzerland (maps.google.ch)</option>
+					<option value="maps.google.cz">Czech Republic (maps.google.cz)</option>
+					<option value="maps.google.de">Germany (maps.google.de)</option>
+					<option value="maps.google.dk">Denmark (maps.google.dk)</option>
+					<option value="maps.google.es">Spain (maps.google.es)</option>
+					<option value="maps.google.fi">Finland (maps.google.fi)</option>
+					<option value="maps.google.fr">France (maps.google.fr)</option>
+					<option value="maps.google.it">Italy (maps.google.it)</option>
+					<option value="maps.google.jp">Japan (maps.google.jp)</option>
+					<option value="maps.google.nl">Netherlands (maps.google.nl)</option>
+					<option value="maps.google.no">Norway (maps.google.no)</option>
+					<option value="maps.google.co.nz">New Zealand (maps.google.co.nz)</option>
+					<option value="maps.google.pl">Poland (maps.google.pl)</option>
+					<option value="maps.google.pt">Portugal (maps.google.pt)</option>
+					<option value="maps.google.ru">Russia (maps.google.ru)</option>
+					<option value="maps.google.se">Sweden (maps.google.se)</option>
+					<option value="maps.google.tw">Taiwan (maps.google.tw)</option>
+					<option value="maps.google.co.uk">United Kingdom (maps.google.co.uk)</option>
+					<option value="maps.google.cl">Chile (maps.google.cl)</option>
+					<option value="maps.google.co.za">South Africa (maps.google.co.za)</option>
+				</field>
+				<field name="googleindexing" type="radio" size= "1" default="1" export='0' label="GOOGLEMAPS_INDEXING" description="GOOGLEMAPS_TT_INDEXING">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="align" type="list" size= "4" default="center" export='1' label="GOOGLEMAPS_MAPS_ALIGN" description="GOOGLEMAPS_TT_MAPS_ALIGN">
+					<option value="left">GOOGLEMAPS_MAPS_ALIGNLEFT</option>
+					<option value="center">GOOGLEMAPS_MAPS_ALIGNCENTER</option>
+					<option value="right">GOOGLEMAPS_MAPS_ALIGNRIGHT</option>
+					<option value="none">GOOGLEMAPS_MAPS_ALIGNNONE</option>
+				</field>
+				<field name="langtype" type="list" size="1" default="site" export='0' label="GOOGLEMAPS_LANGUAGE_OPTION" description="GOOGLEMAPS_TT_LANGUAGE_OPTION">
+					<option value="site">GOOGLEMAPS_LANGTYPE_SITE</option>
+					<option value="joomfish">GOOGLEMAPS_LANGTYPE_JOOMFISH</option>
+					<option value="user">GOOGLEMAPS_LANGTYPE_USER</option>
+					<option value="config">GOOGLEMAPS_LANGTYPE_CONFIG</option>
+				</field>
+				<field name="lang" type="text" size= "5" default="" export='0' label="GOOGLEMAPS_LANGUAGE" description="GOOGLEMAPS_TT_LANGUAGE" />
+				<field name="width" type="text" size= "10" default="500" export='1' label="GOOGLEMAPS_MAPS_WIDTH" description="GOOGLEMAPS_TT_MAPS_WIDTH" />
+				<field name="height" type="text" size= "10" default="400" export='1' label="GOOGLEMAPS_MAPS_HEIGHT" description="GOOGLEMAPS_TT_MAPS_HEIGHT" />
+				<field name="effect" type="radio" size= "1" default="none" export='1' label="GOOGLEMAPS_MAPS_EFFECT" description="GOOGLEMAPS_TT_MAPS_EFFECT">
+					<option value="none">GOOGLEMAPS_MAPS_EFFECTNONE</option>
+					<option value="horizontal">GOOGLEMAPS_MAPS_EFFECTHORZ</option>
+					<option value="vertical">GOOGLEMAPS_MAPS_EFFECTVERT</option>
+				</field>
+			</fieldset>
+			<fieldset name="GOOGLEMAP_LOCATION">
+				<field name="lat" type="text" size= "15" default="52.075581" export='1' label="GOOGLEMAPS_MAPS_LAT" description="GOOGLEMAPS_TT_MAPS_LAT" />
+				<field name="lon" type="text" size= "15" default="4.541513" export='1' label="GOOGLEMAPS_MAPS_LNG" description="GOOGLEMAPS_TT_MAPS_LNG" />
+				<field name="centerlat" type="text" size= "15" default="" export='1' label="GOOGLEMAPS_MAPS_CENTERLAT" description="GOOGLEMAPS_TT_MAPS_CENTERLAT" />
+				<field name="centerlon" type="text" size= "15" default="" export='1' label="GOOGLEMAPS_MAPS_CENTERLNG" description="GOOGLEMAPS_TT_MAPS_CENTERLNG" />
+				<field name="address" type="text" size= "80" default="" export='1' label="GOOGLEMAPS_MAPS_ADRESS" description="GOOGLEMAPS_TT_MAPS_ADRESS" />
+				<field name="latitudeid" type="text" size= "30" default="" export='1' label="GOOGLEMAPS_MAPS_LATITUDEID" description="GOOGLEMAPS_TT_MAPS_LATITUDEID" />
+				<field name="latitudedesc" type="radio" size= "1" default="1" export='1' label="GOOGLEMAPS_MAPS_LATITUDEDESC" description="GOOGLEMAPS_TT_MAPS_LATITUDEDESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>		
+				<field name="latitudecoord" type="radio" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_LATITUDECOORD" description="GOOGLEMAPS_TT_MAPS_LATITUDECOORD">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+			</fieldset>
+			<fieldset name="GOOGLEMAP_CONTROL">
+				<field name="controltype" type="radio" size= "5" default="user" export='1' label="GOOGLEMAPS_MAPS_CONTROLTYPE" description="GOOGLEMAPS_TT_MAPS_CONTROLTYPE">
+					<option value="UI">GOOGLEMAPS_MAPS_CONTROLTYPEAUTOMATIC</option>
+					<option value="user">GOOGLEMAPS_MAPS_CONTROLTYPEUSER</option>
+				</field>
+				<field name="zoomType" type="radio" size= "10" default="3D-large" export='1' label="GOOGLEMAPS_MAPS_MAPCONTROL" description="GOOGLEMAPS_TT_MAPS_MAPCONTROL">
+					<option value="Large">GOOGLEMAPS_MAPS_MAPCONTROLLARGE</option>
+					<option value="Small">GOOGLEMAPS_MAPS_MAPCONTROLSMALL</option>
+					<option value="3D-large">GOOGLEMAPS_MAPS_MAPCONTROL3DLARGE</option>
+					<option value="3D-largeSV">GOOGLEMAPS_MAPS_MAPCONTROL3DLARGESV</option>
+					<option value="3D-small">GOOGLEMAPS_MAPS_MAPCONTROL3DSMALL</option>
+					<option value="None">GOOGLEMAPS_MAPS_MAPCONTROLNONE</option>
+				</field>
+				<field name="zoom" type="list" size= "1" default="10" export='1' label="GOOGLEMAPS_MAPS_ZOOM" description="GOOGLEMAPS_TT_MAPS_ZOOM">
+					<option value="19">19</option>
+					<option value="18">18</option>
+					<option value="17">17</option>
+					<option value="16">16</option>
+					<option value="15">15</option>
+					<option value="14">14</option>
+					<option value="13">13</option>
+					<option value="12">12</option>
+					<option value="11">11</option>
+					<option value="10">10</option>
+					<option value="9">9</option>
+					<option value="8">8</option>
+					<option value="7">7</option>
+					<option value="6">6</option>
+					<option value="5">5</option>
+					<option value="4">4</option>
+					<option value="3">3</option>
+					<option value="2">2</option>
+					<option value="1">1</option>
+					<option value="0">0</option>
+				</field>
+				<field name="corzoom" type="list" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_CORZOOM" description="GOOGLEMAPS_TT_MAPS_CORZOOM">
+					<option value="10">+10</option>
+					<option value="9">+9</option>
+					<option value="8">+8</option>
+					<option value="7">+7</option>
+					<option value="6">+6</option>
+					<option value="5">+5</option>
+					<option value="4">+4</option>
+					<option value="3">+3</option>
+					<option value="2">+2</option>
+					<option value="1">+1</option>
+					<option value="0">0</option>
+					<option value="-1">-1</option>
+					<option value="-2">-2</option>
+					<option value="-3">-3</option>
+					<option value="-4">-4</option>
+					<option value="-5">-5</option>
+					<option value="-6">-6</option>
+					<option value="-7">-7</option>
+					<option value="-8">-8</option>
+					<option value="-9">-9</option>
+					<option value="-10">-10</option>
+				</field>
+				<field name="minzoom" type="list" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_MINZOOM" description="GOOGLEMAPS_TT_MAPS_MINZOOM">
+					<option value="19">19</option>
+					<option value="18">18</option>
+					<option value="17">17</option>
+					<option value="16">16</option>
+					<option value="15">15</option>
+					<option value="14">14</option>
+					<option value="13">13</option>
+					<option value="12">12</option>
+					<option value="11">11</option>
+					<option value="10">10</option>
+					<option value="9">9</option>
+					<option value="8">8</option>
+					<option value="7">7</option>
+					<option value="6">6</option>
+					<option value="5">5</option>
+					<option value="4">4</option>
+					<option value="3">3</option>
+					<option value="2">2</option>
+					<option value="1">1</option>
+					<option value="0">0</option>
+				</field>
+				<field name="maxzoom" type="list" size= "1" default="19" export='1' label="GOOGLEMAPS_MAPS_MAXZOOM" description="GOOGLEMAPS_TT_MAPS_MAXZOOM">
+					<option value="19">19</option>
+					<option value="18">18</option>
+					<option value="17">17</option>
+					<option value="16">16</option>
+					<option value="15">15</option>
+					<option value="14">14</option>
+					<option value="13">13</option>
+					<option value="12">12</option>
+					<option value="11">11</option>
+					<option value="10">10</option>
+					<option value="9">9</option>
+					<option value="8">8</option>
+					<option value="7">7</option>
+					<option value="6">6</option>
+					<option value="5">5</option>
+					<option value="4">4</option>
+					<option value="3">3</option>
+					<option value="2">2</option>
+					<option value="1">1</option>
+					<option value="0">0</option>
+				</field>
+				<field name="rotation" type="radio" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_ROTATION" description="GOOGLEMAPS_TT_MAPS_ROTATION">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>		
+				<field name="zoomnew" type="radio" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_ZOOMNEW" description="GOOGLEMAPS_TT_MAPS_ZOOMNEW">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="zoomWheel" type="radio" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_MOUSEWHEEL" description="GOOGLEMAPS_TT_MAPS_MOUSEWHEEL">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="keyboard" type="radio" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_KEYBOARD" description="GOOGLEMAPS_TT_MAPS_KEYBOARD">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="mapType" type="radio" size= "9" default="Normal" export='1' label="GOOGLEMAPS_MAPS_MAPTYPE" description="GOOGLEMAPS_TT_MAPS_MAPTYPE">
+					<option value="Normal">GOOGLEMAPS_MAPS_MAPTYPENORMAL</option>
+					<option value="Satellite">GOOGLEMAPS_MAPS_MAPTYPESATELLITE</option>
+					<option value="Hybrid">GOOGLEMAPS_MAPS_MAPTYPEHYBRID</option>
+					<option value="Terrain">GOOGLEMAPS_MAPS_MAPTYPETERRAIN</option>
+					<option value="Earth">GOOGLEMAPS_MAPS_MAPTYPEEARTH</option>
+				</field>
+				<field name="showMaptype" type="radio" size= "1" default="1" export='1' label="GOOGLEMAPS_MAPS_SHOWMAPTYPE" description="GOOGLEMAPS_TT_MAPS_SHOWMAPTYPE">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="showTerrainMaptype" type="radio" size= "1" default="1" export='1' label="GOOGLEMAPS_MAPS_SHOWTERRAIN" description="GOOGLEMAPS_MAPS_TT_SHOWTERRAIN">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="showEarthMaptype" type="radio" size= "1" default="1" export='1' label="GOOGLEMAPS_MAPS_SHOWEARTH" description="GOOGLEMAPS_MAPS_TT_SHOWEARTH">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="showscale" type="radio" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_SCALE" description="GOOGLEMAPS_TT_MAPS_SCALE">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="overview" type="radio" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_OVERVIEW" description="GOOGLEMAPS_TT_MAPS_OVERVIEW">
+					<option value="0">GOOGLEMAPS_MAPS_OVERVIEWDISABLED</option>
+					<option value="1">GOOGLEMAPS_MAPS_OVERVIEWENABLED</option>
+					<option value="2">GOOGLEMAPS_MAPS_OVERVIEWENABLEDCLOSED</option>
+				</field>
+				<field name="ovzoom" type="list" size= "1" default="-3" export='1' label="GOOGLEMAPS_MAPS_OVZOOM" description="GOOGLEMAPS_TT_MAPS_OVZOOM">
+					<option value="10">+10</option>
+					<option value="9">+9</option>
+					<option value="8">+8</option>
+					<option value="7">+7</option>
+					<option value="6">+6</option>
+					<option value="5">+5</option>
+					<option value="4">+4</option>
+					<option value="3">+3</option>
+					<option value="2">+2</option>
+					<option value="1">+1</option>
+					<option value="">0</option>
+					<option value="-1">-1</option>
+					<option value="-2">-2</option>
+					<option value="-3">-3</option>
+					<option value="-4">-4</option>
+					<option value="-5">-5</option>
+					<option value="-6">-6</option>
+					<option value="-7">-7</option>
+					<option value="-8">-8</option>
+					<option value="-9">-9</option>
+					<option value="-10">-10</option>
+				</field>
+				<field name="navlabel" type="radio" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_NAVLABEL" description="GOOGLEMAPS_TT_MAPS_NAVLABEL">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="dragging" type="radio" size="1" default="1" export='1' label="GOOGLEMAPS_MAPS_DRAGGING" description="GOOGLEMAPS_TT_MAPS_DRAGGING">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="marker" type="radio" size= "1" default="1" export='1' label="GOOGLEMAPS_MAPS_INFOWINDOW" description="GOOGLEMAPS_MAPS_TT_INFOWINDOW">
+				<option value="1">GOOGLEMAPS_MAPS_INFOWINDOWOPEN</option>
+				<option value="0">GOOGLEMAPS_MAPS_INFOWINDOWCLOSED</option>
+				</field>
+			</fieldset>
+			<fieldset name="GOOGLEMAP_ICON">
+				<field name="icon" type="text" size="40" maxsize="255" default="" export='1' label="GOOGLEMAPS_ICONS_IMAGE" description="GOOGLEMAPS_TT_ICONS_IMAGE" />
+				<field name="iconwidth" type="text" size= "3" default="" export='1' label="GOOGLEMAPS_ICONS_WIDTH" description="GOOGLEMAPS_TT_ICONS_WIDTH" />
+				<field name="iconheight" type="text" size= "3" default="" export='1' label="GOOGLEMAPS_ICONS_HEIGHT" description="GOOGLEMAPS_TT_ICONS_HEIGHT" />
+				<field name="iconanchorx" type="text" size= "3" default="" export='1' label="GOOGLEMAPS_ICONS_ANCHORX" description="GOOGLEMAPS_TT_ICONS_ANCHORX" />
+				<field name="iconanchory" type="text" size= "3" default="" export='1' label="GOOGLEMAPS_ICONS_ANCHORY" description="GOOGLEMAPS_TT_ICONS_ANCHORY" />
+				<field name="iconshadow" type="text" size="60" maxsize="255" default="" export='1' label="GOOGLEMAPS_ICONS_SHADOW" description="GOOGLEMAPS_TT_ICONS_SHADOW" />
+				<field name="iconshadowwidth" type="text" size= "3" default="" export='1' label="GOOGLEMAPS_ICONS_SHADOWWIDTH" description="GOOGLEMAPS_TT_ICONS_SHADOWWIDTH" />
+				<field name="iconshadowheight" type="text" size= "3" default="" export='1' label="GOOGLEMAPS_ICONS_SHADOWHEIGHT" description="GOOGLEMAPS_TT_ICONS_SHADOWHEIGHT" />
+				<field name="iconshadowanchorx" type="text" size= "3" default="" export='1' label="GOOGLEMAPS_ICONS_SHADOWANCHORX" description="GOOGLEMAPS_TT_ICONS_SHADOWANCHORX" />
+				<field name="iconshadowanchory" type="text" size= "3" default="" export='1' label="GOOGLEMAPS_ICONS_SHADOWANCHORY" description="GOOGLEMAPS_TT_ICONS_SHADOWANCHORY" />
+				<field name="iconinfoanchorx" type="text" size= "3" default="" export='1' label="GOOGLEMAPS_ICONS_INFOANCHORX" description="GOOGLEMAPS_TT_ICONS_INFOANCHORX" />
+				<field name="iconinfoanchory" type="text" size= "3" default="" export='1' label="GOOGLEMAPS_ICONS_INFOANCHORY" description="GOOGLEMAPS_TT_ICONS_INFOANCHORY" />
+				<field name="icontransparent" type="text" size="60" maxsize="255" default="" export='1' label="GOOGLEMAPS_ICONS_TRANSPARANT" description="GOOGLEMAPS_TT_ICONS_TRANSPARANT" />
+				<field name="iconimagemap" type="textarea" rows="5" cols="60" default="" export='1' label="GOOGLEMAPS_ICONS_IMAGEMAP" description="GOOGLEMAPS_TT_ICONS_IMAGEMAP" />
+			</fieldset>
+			<fieldset name="GOOGLEMAP_LAYERS">
+				<field name="traffic" type="radio" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_TRAFFIC" description="GOOGLEMAPS_TT_MAPS_TRAFIC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="panoramio" type="radio" size= "1" default="none" export='1' label="GOOGLEMAPS_MAPS_PANORAMIO" description="GOOGLEMAPS_TT_MAPS_PANORAMIO">
+					<option value="none">GOOGLEMAPS_MAPS_PANORAMIONO</option>
+					<option value="all">GOOGLEMAPS_MAPS_PANORAMIOALL</option>
+					<option value="popular">GOOGLEMAPS_MAPS_PANORAMIOPOPULAIR</option>
+				</field>
+				<field name="panotype" type="text" size="8" default="none" export='1' label="GOOGLEMAPS_MAPS_PANORAMIOTYPE" description="GOOGLEMAPS_TT_MAPS_PANORAMIOTYPE" />
+				<field name="panoorder" type="radio" size= "1" default="popularity" export='1' label="GOOGLEMAPS_MAPS_PANORAMIOORDER" description="GOOGLEMAPS_TT_MAPS_PANORAMIOORDER">
+					  <option value="popularity">GOOGLEMAPS_MAPS_PANORAMIOORDERPOPULARITY</option>
+					  <option value="upload_date">GOOGLEMAPS_MAPS_PANORAMIOORDERUPLOADDATE</option>
+				</field>
+				<field name="panomax" type="text" size="3" default="50" export='1' label="GOOGLEMAPS_MAPS_PANORAMIOMAX" description="GOOGLEMAPS_TT_MAPS_PANORAMIOMAX" />
+				<field name="youtube" type="radio" size= "1" default="none" export='1' label="GOOGLEMAPS_MAPS_YOUTUBE" description="GOOGLEMAPS_TT_MAPS_YOUTUBE">
+					<option value="all">Yes</option>
+					<option value="none">No</option>
+				</field>
+				<field name="wiki" type="text" size= "8" default="none" export='1' label="GOOGLEMAPS_MAPS_WIKI" description="GOOGLEMAPS_TT_MAPS_WIKI" />
+				<field name="adsmanager" type="radio" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_ADS" description="GOOGLEMAPS_TT_MAPS_ADS">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="maxads" type="text" size="3" default="3" export='1' label="GOOGLEMAPS_MAPS_ADSMAX" description="GOOGLEMAPS_TT_MAPS_ADSMAX" />
+				<field name="localsearch" type="radio" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_LOCALSEARCH" description="GOOGLEMAPS_TT_MAPS_LOCALSEARCH">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="adsense" type="text" size="40" default="" export='1' label="GOOGLEMAPS_ADSENSE" description="GOOGLEMAPS_TT_ADSENSE" />
+				<field name="channel" type="text" size="40" default="" export='1' label="GOOGLEMAPS_MAPS_ADSENSECHANNEL" description="GOOGLEMAPS_TT_MAPS_ADSENSECHANNEL" />
+				<field name="googlebar" type="radio" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_GOOGLEBAR" description="GOOGLEMAPS_TT_MAPS_GOOGLEBAR">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="searchlist" type="text" size="40" default="inline" export='1' label="GOOGLEMAPS_MAPS_SEARCHLISTTYPE" description="GOOGLEMAPS_TT_MAPS_SEARCHLISTTYPE" />
+				<field name="searchtarget" type="radio" size= "7" default="_blank" export='1' label="GOOGLEMAPS_MAPS_SEARCHLINKTARGET" description="GOOGLEMAPS_TT_MAPS_SEARCHLINKTARGET">
+					<option value="_blank">GOOGLEMAPS_MAPS_SEARCHLINKTARGETBLANK</option>
+					<option value="_self">GOOGLEMAPS_MAPS_SEARCHLINKTARGETSELF</option>
+					<option value="_top">GOOGLEMAPS_MAPS_SEARCHLINKTARGETTOP</option>
+					<option value="_parent">GOOGLEMAPS_MAPS_SEARCHLINKTARGETPARENT</option>
+				</field>
+				<field name="searchzoompan" type="radio" size= "1" default="1" export='1' label="GOOGLEMAPS_MAPS_SEARCHZOOM" description="GOOGLEMAPS_TT_MAPS_SEARCHZOOM">
+				<option value="1">GOOGLEMAPS_MAPS_SEARCHZOOMPANZOOM</option>
+				<option value="0">GOOGLEMAPS_MAPS_SEARCHZOOMNOZOOM</option>
+				</field>
+			</fieldset>
+			<fieldset name="GOOGLEMAP_DIRECTIONS">
+				<field name="dir" type="list" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_DIR" description="GOOGLEMAPS_TT_MAPS_DIR">
+					<option value="0">GOOGLEMAPS_MAPS_DIRNONE</option>
+					<option value="1">GOOGLEMAPS_MAPS_DIREXTERNALGOOGLE</option>
+					<option value="2">GOOGLEMAPS_MAPS_DIREXTERNALDIR</option>
+					<option value="3">GOOGLEMAPS_MAPS_DIRLIGHTBOX</option>
+					<option value="4">GOOGLEMAPS_MAPS_DIRLIGHTBOXGOOGLE</option>
+					<option value="5">GOOGLEMAPS_MAPS_DIRONMAP</option>
+				</field>
+				<field name="dirtype" type="radio" size= "1" default="D" export='1' label="GOOGLEMAPS_MAPS_DIRTYPE" description="GOOGLEMAPS_TT_MAPS_DIRTYPE">
+					<option value="D">GOOGLEMAPS_MAPS_DIRTYPEDRIVING</option>
+					<option value="W">GOOGLEMAPS_MAPS_DIRTYPEWALKING</option>
+				</field>
+				<field name="avoidhighways" type="radio" size="1" default="0" export='1' label="GOOGLEMAPS_MAPS_AVOIDHIGHWAYS" description="GOOGLEMAPS_TT_MAPS_AVOIDHIGHWAYS">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="showdir" type="radio" size= "1" default="1" export='1' label="GOOGLEMAPS_MAPS_SHOWDIR" description="GOOGLEMAPS_TT_MAPS_SHOWDIR">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+				</field>
+				<field name="animdir" type="radio" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_ANIMDIR" description="GOOGLEMAPS_TT_MAPS_ANIMDIR">
+				  <option value="0">No</option>
+				  <option value="1">GOOGLEMAPS_MAPS_ANIMDIRTOP</option>
+				  <option value="2">GOOGLEMAPS_MAPS_ANIMDIRBOTTOM</option>
+				</field>
+				<field name="animspeed" type="text" size="3" default="1" export='1' label="GOOGLEMAPS_MAPS_ANIMSPEED" description="GOOGLEMAPS_TT_MAPS_ANIMSPEED" />
+				<field name="animautostart" type="radio" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_ANIMAUTOSTART" description="GOOGLEMAPS_TT_MAPS_ANIMAUTOSTART">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="animunit" type="radio" size="1" default="kilometers" export='1' label="GOOGLEMAPS_MAPS_ANIMUNIT" description="GOOGLEMAPS_TT_MAPS_ANIMUNIT">
+					<option value="kilometers">GOOGLEMAPS_TT_MAPS_ANIMUNITKILOMETERS</option>
+					<option value="miles">GOOGLEMAPS_TT_MAPS_ANIMUNITMILES</option>
+				</field>
+				<field name="formspeed" type="radio" size="1" default="0" export='1' label="GOOGLEMAPS_MAPS_FORMSPEED" description="GOOGLEMAPS_TT_MAPS_FORMSPEED">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="formdirtype" type="radio" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_DIRSHOWTYPE" description="GOOGLEMAPS_TT_MAPS_DIRSHOWTYPE">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>		
+				<field name="formaddress" type="radio" size="1" default="0" export='1' label="GOOGLEMAPS_MAPS_FORMADDRESS" description="GOOGLEMAPS_TT_MAPS_FORMADDRESS">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="formdir" type="radio" size="1" default="0" export='1' label="GOOGLEMAPS_MAPS_FORMDIR" description="GOOGLEMAPS_TT_MAPS_FORMDIR">
+					<option value="0">No prefilled address</option>
+					<option value="1">Address in from</option>
+					<option value="2">Address in to</option>
+				</field>
+				<field name="langanim" type="textarea" rows="3" cols="40" default="en;The requested panorama could not be displayed|Could not generate a route for the current start and end addresses|Street View coverage is not available for this route|You have reached your destination|miles|miles|ft|kilometers|kilometer|meters|In|You will reach your destination|Stop|Drive|Press Drive to follow your route|Route|Speed|Fast|Medium|Slow" export='0' label="GOOGLEMAPS_MAPS_LANGANIM" description="GOOGLEMAPS_TT_APS_LANGANIM" />
+				<field name="txtdir" type="textarea" rows="3" cols="40" default="Directions: " export='1' label="GOOGLEMAPS_MAPS_TITLEDIR" description="GOOGLEMAPS_TT_MAPS_TITLEDIR" />
+				<field name="txtgetdir" type="textarea" rows="3" cols="40" default="Get Directions" export='1' label="GOOGLEMAPS_MAPS_BUTTONDIR" description="GOOGLEMAPS_TT_MAPS_BUTTONDIR" />
+				<field name="txtfrom" type="textarea" rows="3" cols="40" default="From here" export='1' label="GOOGLEMAPS_MAPS_TXTFROMDIR" description="GOOGLEMAPS_TT_MAPS_TXTFROMDIR" />
+				<field name="txtto" type="textarea" rows="3" cols="40" default="To here" export='1' label="GOOGLEMAPS_MAPS_TXTTODIR" description="GOOGLEMAPS_TT_MAPS_TXTTODIR" />
+				<field name="txtdiraddr" type="textarea" rows="3" cols="40" default="Address: " export='1' label="GOOGLEMAPS_MAPS_TXTLABELADDR" description="GOOGLEMAPS_TT_MAPS_TXTLABELADDR" />
+				<field name="txt_driving" type="textarea" rows="3" cols="40" default="" value="Driving" export='1' label="GOOGLEMAPS_MAPS_TXTLABELDRIVING" description="GOOGLEMAPS_TT_MAPS_TXTLABELDRIVING" />
+				<field name="txt_avhighways" type="textarea" rows="3" cols="40" default="" value="Avoid highways" export='1' label="GOOGLEMAPS_MAPS_TXTAVOIDHIGHWAYS" description="GOOGLEMAPS_TT_MAPS_TXTAVOIDHIGHWAYS" />
+				<field name="txt_walking" type="textarea" rows="3" cols="40" default="" value="Walking" export='1' label="GOOGLEMAPS_MAPS_TXTWALKING" description="GOOGLEMAPS_TT_MAPS_TXTWALKING" />
+				<field name="dirdefault" type="radio" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_FROMTODEFAULT" description="GOOGLEMAPS_TT_MAPS_FROMTODEFAULT">
+				<option value="0">GOOGLEMAPS_MAPS_FROMTODEFAULTTO</option>
+				<option value="1">GOOGLEMAPS_MAPS_FROMTODEFAULTFROM</option>
+				</field>
+				<field name="gotoaddr" type="radio" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_GOTOADDR" description="GOOGLEMAPS_TT_MAPS_GOTOADDR">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="gotoaddrzoom" type="list" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_GOTOADDRZOOM" description="GOOGLEMAPS_TT_MAPS_GOTOADDRZOOM">
+					<option value="19">19</option>
+					<option value="18">18</option>
+					<option value="17">17</option>
+					<option value="16">16</option>
+					<option value="15">15</option>
+					<option value="14">14</option>
+					<option value="13">13</option>
+					<option value="12">12</option>
+					<option value="11">11</option>
+					<option value="10">10</option>
+					<option value="9">9</option>
+					<option value="8">8</option>
+					<option value="7">7</option>
+					<option value="6">6</option>
+					<option value="5">5</option>
+					<option value="4">4</option>
+					<option value="3">3</option>
+					<option value="2">2</option>
+					<option value="1">1</option>
+					<option value="0">0</option>
+				</field>
+				<field name="txtaddr" type="textarea" rows="3" cols="40" default="Address: ##" export='1' label="GOOGLEMAPS_MAPS_TXTADDRESSINFOWINDOW" description="GOOGLEMAPS_TT_MAPS_TXTADDRESSINFOWINDOW" />
+				<field name="erraddr" type="textarea" rows="3" cols="40" default="Address ## not found!" export='1' label="GOOGLEMAPS_MAPS_ADDRERRTXT" description="GOOGLEMAPS_TT_MAPS_ADDRERRTXT" />
+				<field name="clientgeotype" type="radio" size= "1" default="google" export='1' label="GOOGLEMAPS_MAPS_GEOTYPE" description="GOOGLEMAPS_TT_MAPS_GEOTYPE">
+					<option value="google">GOOGLEMAPS_MAPS_GEOTYPE_GOOGLE</option>
+					<option value="local">GOOGLEMAPS_MAPS_GEOTYPE_LOCAL</option>
+				</field>
+			</fieldset>
+			<fieldset name="GOOGLEMAP_LIGHTBOX">
+				<field name="lightbox" type="radio" size="1" default="0" export='1' label="GOOGLEMAPS_MAPS_LIGHTBOX" description="GOOGLEMAPS_TT_MAPS_LIGHTBOX">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="txtlightbox" type="textarea" rows="3" cols="40" default="Open lightbox" export='1' label="GOOGLEMAPS_MAPS_TXTLIGHTBOX" description="GOOGLEMAPS_TT_MAPS_TXTLIGHTBOX" />
+				<field name="lbxwidth" type="text" size= "10" default="500" export='1' label="GOOGLEMAPS_MAPS_LBWIDTH" description="GOOGLEMAPS_TT_MAPS_LBWIDTH" />
+				<field name="lbxheight" type="text" size= "10" default="700" export='1' label="GOOGLEMAPS_MAPS_LBHEIGHT" description="GOOGLEMAPS_TT_MAPS_LBHEIGHT" />
+			</fieldset>
+			<fieldset name="GOOGLEMAP_STREETVIEW">
+				<field name="sv" type="text" size="40" default="none" export='1' label="GOOGLEMAPS_MAPS_SV" description="GOOGLEMAPS_TT_MAPS_SV" />
+				<field name="svwidth" type="text" size= "10" default="100%" export='1' label="GOOGLEMAPS_MAPS_SVWIDTH" description="GOOGLEMAPS_TT_MAPS_SVWIDTH" />
+				<field name="svheight" type="text" size= "10" default="300" export='1' label="GOOGLEMAPS_MAPS_SVHEIGHT" description="GOOGLEMAPS_TT_MAPS_SVHEIGHT" />
+				<field name="svyaw" type="text" size= "10" default="0" export='1' label="GOOGLEMAPS_MAPS_SVYAW" description="GOOGLEMAPS_TT_MAPS_SVYAW" />
+				<field name="svpitch" type="text" size= "10" default="0" export='1' label="GOOGLEMAPS_MAPS_SVPITCH" description="GOOGLEMAPS_TT_MAPS_SVPITCH" />
+				<field name="svzoom" type="text" size= "10" default="" export='1' label="GOOGLEMAPS_MAPS_SVZOOM" description="GOOGLEMAPS_TT_MAPS_SVZOOM" />
+			</fieldset>
+			<fieldset name="GOOGLEMAP_EARTH">
+				<field name="earthtimeout" type="text" size= "4" default="100" export='1' label="GOOGLEMAPS_MAPS_EARTHTIMEOUT" description="GOOGLEMAPS_TT_MAPS_EARTHTIMEOUT" />
+				<field name="earthborders" type="radio" size= "1" default="1" export='1' label="GOOGLEMAPS_MAPS_EARTHBORDERS" description="GOOGLEMAPS_TT_MAPS_EARTHBORDERS">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="earthbuildings" type="radio" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_EARTHBUILDINGS" description="GOOGLEMAPS_TT_MAPS_EARTHBUILDINGS">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="earthroads" type="radio" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_EARTHROADS" description="GOOGLEMAPS_TT_MAPS_EARTHROADS">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="earthterrain" type="radio" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_EARTHTERRAIN" description="GOOGLEMAPS_TT_MAPS_EARTHTERRAIN">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+			</fieldset>
+			<fieldset name="GOOGLEMAP_KML">
+				<field name="kmlrenderer" type="list" size= "3" default="google" export='1' label="GOOGLEMAPS_MAPS_KMLRENDERER" description="GOOGLEMAPS_TT_MAPS_KMLRENDERER">
+					<option value="google">GOOGLEMAPS_MAPS_KMLRENDERERGOOGLE</option>
+					<option value="geoxml">GOOGLEMAPS_MAPS_KMLRENDERERGEOXML</option>
+					<option value="arcgis">GOOGLEMAPS_MAPS_KMLRENDERERARCGIS</option>
+				</field>
+				<field name="kmlsidebar" type="text" size="40" default="none" export='1' label="GOOGLEMAPS_MAPS_KMLSIDEBAR" description="GOOGLEMAPS_TT_MAPS_KMLSIDEBAR" />
+				<field name="kmlsbwidth" type="text" size= "10" default="200" export='1' label="GOOGLEMAPS_MAPS_KMLSIDEBARWIDTH" description="GOOGLEMAPS_TT_MAPS_KMLSIDEBARWIDTH" />
+				<field name="kmlfoldersopen" type="radio" size="1" default="0" export='1' label="GOOGLEMAPS_MAPS_KMLFOLDERSOPEN" description="GOOGLEMAPS_TT_MAPS_KMLFOLDERSOPEN">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="kmlhide" type="radio" size="1" default="0" export='1' label="GOOGLEMAPS_MAPS_KMLHIDE" description="GOOGLEMAPS_TT_MAPS_KMLHIDE">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="kmlopenmethod" type="radio" size="1" default="click" export='1' label="GOOGLEMAPS_MAPS_KMLINFOEVENT" description="GOOGLEMAPS_TT_MAPS_KMLINFOEVENT">
+					<option value="click">GOOGLEMAPS_MAPS_KMLINFOEVENTCLICK</option>
+					<option value="dblclick">GOOGLEMAPS_MAPS_KMLINFOEVENTDOUBLECLICK</option>
+					<option value="mouseover">GOOGLEMAPS_MAPS_KMLINFOEVENTMOUSEOVER</option>
+					<option value="mousedown">GOOGLEMAPS_MAPS_KMLINFOEVENTMOUSEDOWN</option>
+				</field>
+				<field name="kmlsbsort" type="radio" size= "1" default="none" export='1' label="GOOGLEMAPS_MAPS_KMLSORTSIDEBAR" description="GOOGLEMAPS_TT_MAPS_KMLSORTSIDEBAR">
+					<option value="none">GOOGLEMAPS_MAPS_KMLSORTSIDEBARNONE</option>
+					<option value="asc">GOOGLEMAPS_MAPS_KMLSORTSIDEBARASC</option>
+					<option value="desc">GOOGLEMAPS_MAPS_KMLSORTSIDEBARDESC</option>
+				</field>
+				<field name="kmllightbox" type="radio" size="1" default="0" export='1' label="GOOGLEMAPS_MAPS_KMLLIGHTBOX" description="GOOGLEMAPS_TT_MAPS_KMLLIGHTBOX">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="kmlmessshow" type="radio" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_KMLSHOWMESS" description="GOOGLEMAPS_TT_MAPS_KMLSHOWMESS">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="kmlclickablemarkers" type="radio" size= "1" default="1" export='1' label="GOOGLEMAPS_MAPS_SHOWKMLINFO" description="GOOGLEMAPS_TT_MAPS_SHOWKMLINFO">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="kmlopendivmarkers" type="text" size= "30" default="" export='1' label="GOOGLEMAPS_MAPS_SHOWINFOINDIV" description="GOOGLEMAPS_TT_MAPS_SHOWINFOINDIV" />
+				<field name="kmlcontentlinkmarkers" type="radio" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_KMLSHOWEXTCONTENT" description="GOOGLEMAPS_TT_MAPS_KMLSHOWEXTCONTENT">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="kmllinkablemarkers" type="radio" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_KMLMARKERLINK" description="GOOGLEMAPS_TT_MAPS_KMLMARKERLINK">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="kmllinktarget" type="radio" size= "1" default="_self" export='1' label="GOOGLEMAPS_MAPS_KMLLINKTARGET" description="GOOGLEMAPS_TT_MAPS_KMLLINKTARGET">
+					<option value="_self">GOOGLEMAPS_MAPS_KMLLINKTARGETOWNWINTAB</option>
+					<option value="_blank">GOOGLEMAPS_MAPS_KMLLINKTARGETNEWWINTAB</option>
+				</field>
+				<field name="kmllinkmethod" type="radio" size="1" default="dblclick" export='1' label="GOOGLEMAPS_MAPS_KMLMARKERLINKMETHOD" description="GOOGLEMAPS_TT_MAPS_KMLMARKERLINKMETHOD">
+					<option value="click">GOOGLEMAPS_MAPS_KMLMARKERLINKMETHODCLICK</option>
+					<option value="dblclick">GOOGLEMAPS_MAPS_KMLMARKERLINKMETHODDOUBLECLICK</option>
+					<option value="mouseover">GOOGLEMAPS_MAPS_KMLMARKERLINKMETHODMOUSEOVER</option>
+					<option value="mousedown">GOOGLEMAPS_MAPS_KMLMARKERLINKMETHODMOUSEDOWN</option>
+				</field>
+				<field name="kmlmarkerlabel" type="text" size= "3" default="100" export='1' label="GOOGLEMAPS_MAPS_LABELOPACITYMARKER" description="GOOGLEMAPS_TT_MAPS_LABELOPACITYMARKER" />
+				<field name="kmlmarkerlabelclass" type="text" size= "40" default="" export='1' label="GOOGLEMAPS_MAPS_LABELCLASSMARKER" description="GOOGLEMAPS_TT_MAPS_LABELCLASSMARKER" />
+				<field name="kmlpolylabel" type="text" size= "3" default="100" export='1' label="GOOGLEMAPS_MAPS_LABELOPACITYPOLYGON" description="GOOGLEMAPS_TT_MAPS_LABELOPACITYPOLYGON" />
+				<field name="kmlpolylabelclass" type="text" size= "40" default="" export='1' label="GOOGLEMAPS_MAPS_LABELCLASSPOLYGON" description="GOOGLEMAPS_TT_MAPS_LABELCLASSPOLYGON" />
+				<field name="proxy" type="radio" size= "1" default="1" export='1' label="GOOGLEMAPS_MAPS_KMLPROXY" description="GOOGLEMAPS_TT_MAPS_KMLPROXY">
+				<option value="1">Yes</option>
+				<option value="0">No</option>
+				</field>
+				<field name="maxcluster" type="text" size= "3" default="" export='1' label="GOOGLEMAPS_MAPS_CLUSTERMAXMARKERS" description="GOOGLEMAPS_TT_MAPS_CLUSTERMAXMARKERS" />
+				<field name="gridsize" type="text" size= "3" default="" export='1' label="GOOGLEMAPS_MAPS_CLUSTERGRIDSIZE" description="GOOGLEMAPS_TT_MAPS_CLUSTERGRIDSIZE" />
+				<field name="minmarkerscluster" type="text" size= "2" default="" export='1' label="GOOGLEMAPS_MAPS_CLUSTERMINMARKERS" description="GOOGLEMAPS_TT_MAPS_CLUSTERMINMARKERS" />
+				<field name="maxlinesinfocluster" type="text" size= "4" default="" export='1' label="GOOGLEMAPS_MAPS_CLUSTERINFOMAXLINES" description="GOOGLEMAPS_TT_MAPS_CLUSTERINFOMAXLINES" />
+				<field name="clusterinfowindow" type="radio" size="1" default="click" export='1' label="GOOGLEMAPS_MAPS_CLUSTERINFOMETHOD" description="GOOGLEMAPS_TT_MAPS_CLUSTERINFOMETHOD">
+					<option value="click">GOOGLEMAPS_MAPS_CLUSTERINFOMETHODCLICK</option>
+					<option value="dblclick">GOOGLEMAPS_MAPS_CLUSTERINFOMETHODDOUBLECLICK</option>
+					<option value="mouseover">GOOGLEMAPS_MAPS_CLUSTERINFOMETHODMOUSEOVER</option>
+					<option value="mousedown">GOOGLEMAPS_MAPS_CLUSTERINFOMETHODMOUSEDOWN</option>
+				</field>
+				<field name="clusterzoom" type="radio" size="1" default="dblclick" export='1' label="GOOGLEMAPS_MAPS_CLUSTERZOOMINTO" description="GOOGLEMAPS_TT_MAPS_CLUSTERZOOMINTO">
+					<option value="click">GOOGLEMAPS_MAPS_CLUSTERZOOMINTOCLICK</option>
+					<option value="dblclick">GOOGLEMAPS_MAPS_CLUSTERZOOMINTODOUBLECLICK</option>
+					<option value="mouseover">GOOGLEMAPS_MAPS_CLUSTERZOOMINTOMOUSEOVER</option>
+					<option value="mousedown">GOOGLEMAPS_MAPS_CLUSTERZOOMINTOMOUSEDOWN</option>
+				</field>
+				<field name="clustermarkerzoom" type="list" size= "1" default="16" export='1' label="GOOGLEMAPS_MAPS_CLUSTERMARKERZOOM" description="GOOGLEMAPS_TT_MAPS_CLUSTERMARKERZOOM">
+					<option value="19">19</option>
+					<option value="18">18</option>
+					<option value="17">17</option>
+					<option value="16">16</option>
+					<option value="15">15</option>
+					<option value="14">14</option>
+					<option value="13">13</option>
+					<option value="12">12</option>
+					<option value="11">11</option>
+					<option value="10">10</option>
+					<option value="9">9</option>
+					<option value="8">8</option>
+					<option value="7">7</option>
+					<option value="6">6</option>
+					<option value="5">5</option>
+					<option value="4">4</option>
+					<option value="3">3</option>
+					<option value="2">2</option>
+					<option value="1">1</option>
+					<option value="0">0</option>
+				</field>
+			</fieldset>
+			<fieldset name="GOOGLEMAP_CUSTOMTILE">
+				<field name="tilelayer" type="text" size= "80" default="" export='1' label="GOOGLEMAPS_MAPS_TILELAYER" description="GOOGLEMAPS_TT_MAPS_TILELAYER" />
+				<field name="tileopacity" type="text" size= "4" default="1" export='1' label="GOOGLEMAPS_MAPS_TILEOPACITY" description="GOOGLEMAPS_TT_MAPS_TILEOPACITY" />
+				<field name="tilebounds" type="text" size= "40" default="" export='1' label="GOOGLEMAPS_MAPS_TILEBOUNDS" description="GOOGLEMAPS_TT_MAPS_TILEBOUNDS" />
+				<field name="tileminzoom" type="list" size= "1" default="0" export='1' label="GOOGLEMAPS_MAPS_TILEMINZOOM" description="GOOGLEMAPS_TT_MAPS_TILEMINZOOM">
+				  <option value="19">19</option>
+				  <option value="18">18</option>
+				  <option value="17">17</option>
+				  <option value="16">16</option>
+				  <option value="15">15</option>
+				  <option value="14">14</option>
+				  <option value="13">13</option>
+				  <option value="12">12</option>
+				  <option value="11">11</option>
+				  <option value="10">10</option>
+				  <option value="9">9</option>
+				  <option value="8">8</option>
+				  <option value="7">7</option>
+				  <option value="6">6</option>
+				  <option value="5">5</option>
+				  <option value="4">4</option>
+				  <option value="3">3</option>
+				  <option value="2">2</option>
+				  <option value="1">1</option>
+				  <option value="0">0</option>
+				</field>
+				<field name="tilemaxzoom" type="list" size= "1" default="19" export='1' label="GOOGLEMAPS_MAPS_TILEMAXZOOM" description="GOOGLEMAPS_TT_MAPS_TILEMAXZOOM">
+				  <option value="19">19</option>
+				  <option value="18">18</option>
+				  <option value="17">17</option>
+				  <option value="16">16</option>
+				  <option value="15">15</option>
+				  <option value="14">14</option>
+				  <option value="13">13</option>
+				  <option value="12">12</option>
+				  <option value="11">11</option>
+				  <option value="10">10</option>
+				  <option value="9">9</option>
+				  <option value="8">8</option>
+				  <option value="7">7</option>
+				  <option value="6">6</option>
+				  <option value="5">5</option>
+				  <option value="4">4</option>
+				  <option value="3">3</option>
+				  <option value="2">2</option>
+				  <option value="1">1</option>
+				  <option value="0">0</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension" priority="1" name="Plugin Googlemap Update Site">http://tech.reumer.net/update/plugin_googlemap2/extension.xml</server>
+	</updateservers>	
+</extension>

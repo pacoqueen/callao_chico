@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" method="upgrade">
+	<name>simpleForm2</name>
+	<author>ZyX</author>
+	<creationDate>Jan 2010</creationDate>
+	<copyright>Copyright 2010 Micriucov Oleg (ZyX) www.allForJoomla.ru. All rights reserved!</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>info@litecms.ru</authorEmail>
+	<authorUrl>allForJoomla.ru</authorUrl>
+	<version>1.0.19</version>
+	<description>SimpleForm2 module info</description>
+	<files>
+		<filename module="mod_simpleform2">mod_simpleform2.php</filename>
+		<filename module="mod_simpleform2">index.html</filename>
+		<filename module="mod_simpleform2">engine.php</filename>
+		<filename module="mod_simpleform2">simpleform2.class.php</filename>
+		<filename module="mod_simpleform2">ajax/index.html</filename>
+		<filename module="mod_simpleform2">ajax/jquery.js</filename>
+		<filename module="mod_simpleform2">ajax/jquery.form.js</filename>
+		<filename module="mod_simpleform2">images/index.html</filename>
+		<filename module="mod_simpleform2">images/loading.gif</filename>
+		<filename module="mod_simpleform2">kcaptcha/index.html</filename>
+		<filename module="mod_simpleform2">kcaptcha/kcaptcha.php</filename>
+		<filename module="mod_simpleform2">kcaptcha/kcaptcha_config.php</filename>
+		<filename module="mod_simpleform2">kcaptcha/fonts/.htaccess</filename>
+		<filename module="mod_simpleform2">kcaptcha/fonts/antiqua.png</filename>
+		<filename module="mod_simpleform2">kcaptcha/fonts/baskerville.png</filename>
+		<filename module="mod_simpleform2">kcaptcha/fonts/bookman.png</filename>
+		<filename module="mod_simpleform2">kcaptcha/fonts/cambria.png</filename>
+		<filename module="mod_simpleform2">kcaptcha/fonts/constantia.png</filename>
+		<filename module="mod_simpleform2">kcaptcha/fonts/index.html</filename>
+		<filename module="mod_simpleform2">kcaptcha/fonts/lucida.png</filename>
+		<filename module="mod_simpleform2">kcaptcha/fonts/rockwell.png</filename>
+		<filename module="mod_simpleform2">tmpl/index.html</filename>
+		<filename module="mod_simpleform2">tmpl/mail_form.php</filename>
+		<filename module="mod_simpleform2">tmpl/mail_form_item.php</filename>
+	</files>
+	<languages folder="languages">
+		<language tag="ru-RU">ru-RU.mod_simpleform2.ini</language>
+		<language tag="en-GB">en-GB.mod_simpleform2.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="cache" type="radio" default="0" label="Allow caching" description="Allow caching info">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="moduleclass_sfx" type="text" default="" label="Css suffix" description="Css suffix info" />
+				<field name="domainKey" size="70" type="text" default="" label="Domain key" description="Domain key descr" />
+				<field name="sfMailForm" size="70" type="text" default="noreply@yoursite.com" label="Sender email" description="Sender email descr" />
+				<field name="sfMailTo" size="70" type="text" default="admin@yoursite.com" label="Recieve email" description="Recieve email descr" />
+				<field name="sfMailSubj" size="70" type="text" default="--== SimpleForm2 e-mail ==--" label="Mail subject" description="Mail subject descr" />
+				<field name="userCheckFunc" type="text" default="" label="Js user function" description="Js user function descr" />
+				<field name="userResultFunc" type="text" default="" label="Js user result function" description="Js user result function descr" />
+				<field name="simpleCode" type="textarea" filter="raw" cols="40" rows="15" default="&lt;style type=&quot;text/css&quot;&gt;form.simpleForm label{display:block;}form.simpleForm label span{color:#ff0000;}form.simpleForm input.inputtext{width:215px;}form.simpleForm textarea.inputtext{width:215px;height:100px;}form.simpleForm textarea.inputtext_small{width:215px;height:50px;}&lt;/style&gt;&lt;p&gt;{element label=&quot;Ваше имя&quot; type=&quot;text&quot; class=&quot;inputtext&quot;    required=&quot;required&quot; error=&quot;Введите ваше имя&quot;  /}&lt;/p&gt;&lt;p&gt;{element label=&quot;Ваше сообщение&quot; type=&quot;textarea&quot; class=&quot;inputtext&quot;    required=&quot;required&quot; error=&quot;Введите ваше сообщение&quot;  /}&lt;/p&gt;{element type=&quot;captcha&quot; class=&quot;inputtext&quot; width=&quot;220&quot; height=&quot;50&quot; label=&quot;Проверочный код&quot; /}&lt;p&gt;{element  type=&quot;submit&quot;   value=&quot;Отправить&quot;  /}&lt;/p&gt;" label="Simple code" description="Simple code descr" />
+				<field name="okText" type="textarea" filter="raw" cols="40" rows="5" label="Ok text" description="Ok text descr" />
+			</fieldset>
+		</fields>
+	</config>
+	<params>
+		<param name="cache" type="radio" default="0" label="Allow caching" description="Allow caching info">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="moduleclass_sfx" type="text" default="" label="Css suffix" description="Css suffix info" />
+		<param name="domainKey" size="70" type="text" default="" label="Domain key" description="Domain key descr" />
+		<param name="sfMailForm" size="70" type="text" default="noreply@yoursite.com" label="Sender email" description="Sender email descr" />
+		<param name="sfMailTo" size="70" type="text" default="admin@yoursite.com" label="Recieve email" description="Recieve email descr" />
+		<param name="sfMailSubj" size="70" type="text" default="--== SimpleForm2 e-mail ==--" label="Mail subject" description="Mail subject descr" />
+		<param name="userCheckFunc" type="text" default="" label="Js user function" description="Js user function descr" />
+		<param name="userResultFunc" type="text" default="" label="Js user result function" description="Js user result function descr" />
+		<param name="simpleCode" type="textarea" cols="40" rows="15" default="&lt;style type=&quot;text/css&quot;&gt;form.simpleForm label{display:block;}form.simpleForm label span{color:#ff0000;}form.simpleForm input.inputtext{width:215px;}form.simpleForm textarea.inputtext{width:215px;height:100px;}form.simpleForm textarea.inputtext_small{width:215px;height:50px;}&lt;/style&gt;&lt;p&gt;{element label=&quot;Ваше имя&quot; type=&quot;text&quot; class=&quot;inputtext&quot;    required=&quot;required&quot; error=&quot;Введите ваше имя&quot;  /}&lt;/p&gt;&lt;p&gt;{element label=&quot;Ваше сообщение&quot; type=&quot;textarea&quot; class=&quot;inputtext&quot;    required=&quot;required&quot; error=&quot;Введите ваше сообщение&quot;  /}&lt;/p&gt;{element type=&quot;captcha&quot; class=&quot;inputtext&quot; width=&quot;220&quot; height=&quot;50&quot; label=&quot;Проверочный код&quot; /}&lt;p&gt;{element  type=&quot;submit&quot;   value=&quot;Отправить&quot;  /}&lt;/p&gt;" label="Simple code" description="Simple code descr" />
+		<param name="okText" type="textarea" cols="40" rows="5" label="Ok text" description="Ok text descr" />
+	</params>
+	<updateservers>
+		<server type="extension" priority="1" name="AllForJoomla.ru">http://allforjoomla.ru/updates/mod_simpleform2/</server>
+	</updateservers>
+</install>

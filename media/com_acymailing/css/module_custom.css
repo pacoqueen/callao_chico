@@ -1,0 +1,72 @@
+.acysubbuttons input{
+    padding:0 11px 0 11px;
+    display:block;
+    height:22px;
+    line-height:22px;
+    cursor:pointer;
+    border:none;
+    color:#fff;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:11px; 
+    text-transform:uppercase;
+    *width:1%
+}
+
+.acysubbuttons input:hover, .acysubbuttons button:hover, .acysubbuttons input:hover {
+    color: #060;
+}
+
+div#acymailing_module_formAcymailing1, #acymailing_module_formAcymailing1 div{
+	padding: 0;
+	margin: 0;
+        color: #fff;
+}
+
+a.modal{
+        color: #fff;
+}
+
+#acymailing_module_formAcymailing1 .acymailing_mootoolsbutton{
+	padding:5px;
+	border : 1px solid #808080;
+        color: #fff;
+}
+
+a.acymailing_togglemodule{
+	display : block;
+	font-size:16px;
+        color: #fff;
+}
+
+.acymailing_mootoolsbutton p{
+	text-align:center;
+        color: #fff;
+}
+
+#acymailing_module_formAcymailing1 .acymailing_mootoolsbutton:hover{
+	padding:4px;
+	border : 2px solid #808080;
+        color: #fff;
+}
+
+img.captchaimagemodule{
+	border:1px solid #dddddd;
+	float: left;
+        color: #fff;
+}
+
+.captchakeymodule .captchafield{
+	margin-top:3px;
+	margin-left:2px;
+        color: #fff;
+}
+
+.acymailing_fulldiv tr, .acymailing_fulldiv td{
+	border:0px;
+        color: #fff;
+}
+
+.acymailing_module_form td {
+    padding-bottom: 5px;
+    color: #fff;
+}
