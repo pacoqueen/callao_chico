@@ -1,0 +1,3 @@
+Hay dos ramas:
+master -> Todo el código y ficheros (menos los .DS_* de apple de Moi).
+public -> Lo mismo que master pero sin el configuration.php, que contiene datos sensibles como contraseñas de la base de datos y demás.
