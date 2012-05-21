@@ -13,7 +13,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 //-----------------------------------------
 ?>
 
-<!-- XXX: callao chico -->
+<!-- XXX: callao chico: Refactorización de funciones auxiliares -->
 <?php
 include_once "aux_functions.php";
 ?>
