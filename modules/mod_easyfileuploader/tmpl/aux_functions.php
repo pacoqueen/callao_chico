@@ -224,7 +224,7 @@ function mailattach2($docList, $texto1, $texto2, $texto3, $texto4, $texto5,
     if ($activefileupload){
         // print "<br>MimeType detectado:".$_FILES['file1']['type']."<br><br>";
         // Comprobación de MimeType
-        if(!eregi($_FILES['file1']['type'], $docList)) 
+        if (strpos($docList, '*') === false) && (!eregi($_FILES['file1']['type'], $docList)))
             $res = 2;
         // Comprobación de tamaño
         else if (filesize($_FILES['file1']['tmp_name'])>GET_MAX_FILESIZE())
@@ -234,8 +234,8 @@ function mailattach2($docList, $texto1, $texto2, $texto3, $texto4, $texto5,
             // print var_dump($_FILES)." <---- FILES <br>";
             // print var_dump($_POST)." <---- POST <br>";
             // print "------>".strlen($body)."<br>";
-            if (is_uploaded_file($_FILES['file1']['tmp_name']) 
-                && eregi($_FILES['file1']['type'], $docList)){
+            if (is_uploaded_file($_FILES['file1']['tmp_name'])){ 
+                // && eregi($_FILES['file1']['type'], $docList)){
                 // print "DEBUG0 <br>";
                 $body .= "\n\n--Message-Boundary\n";
                 $body .= "Content-type: Binary; name=\"";
